@@ -1,0 +1,102 @@
+.dialog {
+  border: none;
+  border-radius: var(--aegis-radius-xl);
+  padding: 0;
+  box-shadow: var(--aegis-shadow-lg);
+  background-color: var(--aegis-color-surface-default);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog::backdrop {
+  background-color: var(--aegis-color-overlay-scrim);
+}
+
+.dialog[open] {
+  animation: aegis-modal-in var(--aegis-motion-duration-slow) var(--aegis-motion-easing-standard);
+}
+
+/* Sizes */
+.sm { width: var(--aegis-size-modal-sm); max-width: 90vw; }
+.md { width: var(--aegis-size-modal-md); max-width: 90vw; }
+.lg { width: var(--aegis-size-modal-lg); max-width: 90vw; }
+.xl { width: var(--aegis-size-modal-xl); max-width: 90vw; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--aegis-space-6) var(--aegis-space-6) var(--aegis-space-4);
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-heading-md);
+  font-weight: var(--aegis-font-weight-semibold);
+  line-height: var(--aegis-line-height-heading-md);
+  color: var(--aegis-color-text-primary);
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--aegis-size-control-sm);
+  height: var(--aegis-size-control-sm);
+  border: none;
+  border-radius: var(--aegis-radius-md);
+  background: transparent;
+  color: var(--aegis-color-text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.close:hover {
+  background-color: var(--aegis-color-surface-subtle);
+  color: var(--aegis-color-text-primary);
+}
+
+.close:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: var(--aegis-focus-ring-offset);
+  box-shadow: var(--aegis-shadow-focus);
+}
+
+.body {
+  padding: 0 var(--aegis-space-6);
+  overflow-y: auto;
+  flex: 1;
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-md);
+  line-height: var(--aegis-line-height-body-md);
+  color: var(--aegis-color-text-secondary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--aegis-space-3);
+  padding: var(--aegis-space-4) var(--aegis-space-6) var(--aegis-space-6);
+  flex-shrink: 0;
+}
+
+@keyframes aegis-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

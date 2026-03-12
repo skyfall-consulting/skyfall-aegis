@@ -1,0 +1,20 @@
+.card {
+  border-radius: var(--aegis-radius-lg);
+  background-color: var(--aegis-color-surface-default);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+}
+
+/* Elevation */
+.flat {
+  box-shadow: var(--aegis-shadow-none);
+}
+
+.raised {
+  box-shadow: var(--aegis-shadow-sm);
+}
+
+/* Padding */
+.pad-none { padding: 0; }
+.pad-sm { padding: var(--aegis-space-4); }
+.pad-md { padding: var(--aegis-space-6); }
+.pad-lg { padding: var(--aegis-space-8); }

@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100%;
+}
+
+.tabList {
+  display: flex;
+  gap: 0;
+  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+}
+
+.tab {
+  position: relative;
+  padding: var(--aegis-space-3) var(--aegis-space-4);
+  background: transparent;
+  border: none;
+  border-bottom: var(--aegis-border-width-medium) solid transparent;
+  margin-bottom: calc(-1 * var(--aegis-border-width-hairline));
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-label-md);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
+    border-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.tab:hover:not(:disabled) {
+  color: var(--aegis-color-text-primary);
+}
+
+.tab:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: calc(-1 * var(--aegis-border-width-medium));
+  box-shadow: var(--aegis-shadow-focus);
+  border-radius: var(--aegis-radius-sm) var(--aegis-radius-sm) 0 0;
+}
+
+.tab:disabled {
+  opacity: var(--aegis-opacity-disabled);
+  cursor: not-allowed;
+}
+
+.active {
+  color: var(--aegis-color-brand-primary-500);
+  border-bottom-color: var(--aegis-color-brand-primary-500);
+}
+
+.panel {
+  padding: var(--aegis-space-4) 0;
+}
+
+.panel:focus {
+  outline: none;
+}

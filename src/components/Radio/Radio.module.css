@@ -1,0 +1,81 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--aegis-space-2);
+  cursor: pointer;
+  min-height: var(--aegis-size-touch-min);
+  user-select: none;
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  border-radius: var(--aegis-radius-full);
+  background-color: var(--aegis-color-surface-default);
+  flex-shrink: 0;
+  transition:
+    border-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--aegis-radius-full);
+  background-color: transparent;
+  transition: background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.wrapper:hover .control {
+  border-color: var(--aegis-color-border-strong);
+}
+
+.input:checked + .control {
+  border-color: var(--aegis-color-brand-primary-500);
+}
+
+.input:checked + .control .dot {
+  background-color: var(--aegis-color-brand-primary-500);
+}
+
+.input:focus-visible + .control {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: var(--aegis-focus-ring-offset);
+  box-shadow: var(--aegis-shadow-focus);
+}
+
+.input:disabled + .control {
+  opacity: var(--aegis-opacity-disabled);
+  cursor: not-allowed;
+}
+
+.input:disabled ~ .label {
+  opacity: var(--aegis-opacity-disabled);
+  cursor: not-allowed;
+}
+
+.label {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-md);
+  line-height: var(--aegis-line-height-body-md);
+  color: var(--aegis-color-text-primary);
+}
+
+.error .control {
+  border-color: var(--aegis-color-error-500);
+}

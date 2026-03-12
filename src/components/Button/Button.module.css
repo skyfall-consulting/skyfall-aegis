@@ -1,0 +1,131 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--aegis-space-2);
+  border: var(--aegis-border-width-hairline) solid transparent;
+  border-radius: var(--aegis-radius-md);
+  font-family: var(--aegis-font-family-sans);
+  font-weight: var(--aegis-font-weight-medium);
+  cursor: pointer;
+  transition:
+    background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
+    border-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+  white-space: nowrap;
+  user-select: none;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.button:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: var(--aegis-focus-ring-offset);
+  box-shadow: var(--aegis-shadow-focus);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: var(--aegis-opacity-disabled);
+}
+
+/* Sizes */
+.sm {
+  height: var(--aegis-size-control-sm);
+  padding: 0 var(--aegis-space-3);
+  font-size: var(--aegis-font-size-body-sm);
+}
+
+.md {
+  height: var(--aegis-size-control-md);
+  padding: 0 var(--aegis-space-4);
+  font-size: var(--aegis-font-size-body-md);
+}
+
+.lg {
+  height: var(--aegis-size-control-lg);
+  padding: 0 var(--aegis-space-6);
+  font-size: var(--aegis-font-size-body-lg);
+}
+
+/* Variants */
+.primary {
+  background-color: var(--aegis-color-brand-primary-500);
+  color: var(--aegis-color-text-inverse);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--aegis-color-brand-primary-600);
+}
+
+.primary:active:not(:disabled) {
+  background-color: var(--aegis-color-brand-primary-700);
+}
+
+.secondary {
+  background-color: var(--aegis-color-surface-default);
+  color: var(--aegis-color-text-primary);
+  border-color: var(--aegis-color-border-default);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: var(--aegis-color-surface-subtle);
+  border-color: var(--aegis-color-border-strong);
+}
+
+.secondary:active:not(:disabled) {
+  background-color: var(--aegis-color-neutral-100);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--aegis-color-brand-primary-500);
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: var(--aegis-color-brand-primary-50);
+}
+
+.ghost:active:not(:disabled) {
+  background-color: var(--aegis-color-brand-primary-100);
+}
+
+.danger {
+  background-color: var(--aegis-color-error-500);
+  color: var(--aegis-color-text-inverse);
+}
+
+.danger:hover:not(:disabled) {
+  background-color: var(--aegis-color-error-700);
+}
+
+.danger:active:not(:disabled) {
+  background-color: #7A2020;
+}
+
+/* Full width */
+.fullWidth {
+  width: 100%;
+}
+
+/* Loading */
+.loading .label {
+  opacity: var(--aegis-opacity-subtle);
+}
+
+.spinner {
+  display: inline-flex;
+  animation: aegis-spin 0.8s linear infinite;
+}
+
+.iconLeft,
+.iconRight {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+@keyframes aegis-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

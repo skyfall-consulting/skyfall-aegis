@@ -1,0 +1,308 @@
+/*
+ * Skyfall Aegis — Design Tokens
+ * Source of truth: Skyfall Aegis Style Guide v1
+ *
+ * Naming convention: --aegis-{category}-{role}-{variant}-{scale}
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ============================================
+     BRAND & CORE PALETTE
+     ============================================ */
+  --aegis-color-brand-primary-50: #EEF4FF;
+  --aegis-color-brand-primary-100: #DCE8FF;
+  --aegis-color-brand-primary-200: #BED4FF;
+  --aegis-color-brand-primary-300: #8FB7FF;
+  --aegis-color-brand-primary-400: #5C92F2;
+  --aegis-color-brand-primary-500: #2F6FE4;
+  --aegis-color-brand-primary-600: #1F5CCD;
+  --aegis-color-brand-primary-700: #1849A6;
+  --aegis-color-brand-primary-800: #153B82;
+  --aegis-color-brand-primary-900: #112E63;
+
+  /* ============================================
+     SUPPORT ACCENT — TEAL
+     ============================================ */
+  --aegis-color-accent-teal-50: #EDF9F8;
+  --aegis-color-accent-teal-100: #D4F1EE;
+  --aegis-color-accent-teal-200: #A9E0D9;
+  --aegis-color-accent-teal-300: #77C9BE;
+  --aegis-color-accent-teal-400: #48AE9F;
+  --aegis-color-accent-teal-500: #2E8F83;
+  --aegis-color-accent-teal-600: #237368;
+  --aegis-color-accent-teal-700: #1D5D54;
+
+  /* ============================================
+     NEUTRAL PALETTE
+     ============================================ */
+  --aegis-color-neutral-0: #FFFFFF;
+  --aegis-color-neutral-25: #FCFDFE;
+  --aegis-color-neutral-50: #F6F8FA;
+  --aegis-color-neutral-100: #EDF1F5;
+  --aegis-color-neutral-200: #DCE3EA;
+  --aegis-color-neutral-300: #C1CBD6;
+  --aegis-color-neutral-400: #93A1B2;
+  --aegis-color-neutral-500: #66768A;
+  --aegis-color-neutral-600: #4B5B6C;
+  --aegis-color-neutral-700: #334155;
+  --aegis-color-neutral-800: #223042;
+  --aegis-color-neutral-900: #16202B;
+
+  /* ============================================
+     SEMANTIC PALETTE
+     ============================================ */
+  --aegis-color-success-50: #EEF8F1;
+  --aegis-color-success-500: #2F8F57;
+  --aegis-color-success-700: #1F6B3D;
+
+  --aegis-color-warning-50: #FFF6E8;
+  --aegis-color-warning-500: #B86A00;
+  --aegis-color-warning-700: #8D4F00;
+
+  --aegis-color-error-50: #FFF0F0;
+  --aegis-color-error-500: #C23A3A;
+  --aegis-color-error-700: #8F2626;
+
+  --aegis-color-info-50: #EEF6FF;
+  --aegis-color-info-500: #2563B8;
+  --aegis-color-info-700: #1B4C8E;
+
+  /* ============================================
+     TEXT & SURFACE ALIASES
+     ============================================ */
+  --aegis-color-text-primary: #16202B;
+  --aegis-color-text-secondary: #4B5B6C;
+  --aegis-color-text-muted: #66768A;
+  --aegis-color-text-inverse: #FFFFFF;
+
+  --aegis-color-surface-canvas: #FCFDFE;
+  --aegis-color-surface-default: #FFFFFF;
+  --aegis-color-surface-subtle: #F6F8FA;
+  --aegis-color-surface-raised: #FFFFFF;
+
+  --aegis-color-border-default: #DCE3EA;
+  --aegis-color-border-strong: #C1CBD6;
+  --aegis-color-border-inverse: #334155;
+
+  --aegis-color-focus-ring: #2F6FE4;
+  --aegis-color-overlay-scrim: rgba(22, 32, 43, 0.48);
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  --aegis-font-family-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --aegis-font-family-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --aegis-font-weight-regular: 400;
+  --aegis-font-weight-medium: 500;
+  --aegis-font-weight-semibold: 600;
+  --aegis-font-weight-bold: 700;
+
+  /* Type scale — sizes */
+  --aegis-font-size-display-lg: 40px;
+  --aegis-font-size-display-md: 32px;
+  --aegis-font-size-heading-xl: 28px;
+  --aegis-font-size-heading-lg: 24px;
+  --aegis-font-size-heading-md: 20px;
+  --aegis-font-size-heading-sm: 18px;
+  --aegis-font-size-body-lg: 16px;
+  --aegis-font-size-body-md: 14px;
+  --aegis-font-size-body-sm: 13px;
+  --aegis-font-size-label-lg: 14px;
+  --aegis-font-size-label-md: 13px;
+  --aegis-font-size-caption: 12px;
+  --aegis-font-size-data: 14px;
+  --aegis-font-size-code: 13px;
+
+  /* Type scale — line heights */
+  --aegis-line-height-display-lg: 48px;
+  --aegis-line-height-display-md: 40px;
+  --aegis-line-height-heading-xl: 36px;
+  --aegis-line-height-heading-lg: 32px;
+  --aegis-line-height-heading-md: 28px;
+  --aegis-line-height-heading-sm: 26px;
+  --aegis-line-height-body-lg: 24px;
+  --aegis-line-height-body-md: 22px;
+  --aegis-line-height-body-sm: 20px;
+  --aegis-line-height-label-lg: 20px;
+  --aegis-line-height-label-md: 18px;
+  --aegis-line-height-caption: 16px;
+  --aegis-line-height-data: 20px;
+  --aegis-line-height-code: 18px;
+
+  /* Letter spacing */
+  --aegis-tracking-tight: -0.02em;
+  --aegis-tracking-normal: 0em;
+  --aegis-tracking-wide: 0.01em;
+
+  /* ============================================
+     SPACING
+     ============================================ */
+  --aegis-space-0: 0;
+  --aegis-space-1: 4px;
+  --aegis-space-2: 8px;
+  --aegis-space-3: 12px;
+  --aegis-space-4: 16px;
+  --aegis-space-5: 20px;
+  --aegis-space-6: 24px;
+  --aegis-space-8: 32px;
+  --aegis-space-10: 40px;
+  --aegis-space-12: 48px;
+  --aegis-space-16: 64px;
+  --aegis-space-20: 80px;
+
+  /* ============================================
+     SIZING
+     ============================================ */
+  --aegis-size-control-sm: 32px;
+  --aegis-size-control-md: 40px;
+  --aegis-size-control-lg: 48px;
+
+  --aegis-size-icon-xs: 12px;
+  --aegis-size-icon-sm: 16px;
+  --aegis-size-icon-md: 20px;
+  --aegis-size-icon-lg: 24px;
+
+  --aegis-size-touch-min: 44px;
+
+  --aegis-size-sidebar-default: 280px;
+  --aegis-size-modal-sm: 400px;
+  --aegis-size-modal-md: 560px;
+  --aegis-size-modal-lg: 720px;
+  --aegis-size-modal-xl: 880px;
+
+  /* ============================================
+     RADIUS
+     ============================================ */
+  --aegis-radius-none: 0;
+  --aegis-radius-sm: 6px;
+  --aegis-radius-md: 10px;
+  --aegis-radius-lg: 14px;
+  --aegis-radius-xl: 18px;
+  --aegis-radius-full: 9999px;
+
+  /* ============================================
+     BORDERS
+     ============================================ */
+  --aegis-border-width-none: 0;
+  --aegis-border-width-hairline: 1px;
+  --aegis-border-width-medium: 2px;
+  --aegis-border-width-strong: 3px;
+  --aegis-border-style-default: solid;
+
+  /* ============================================
+     SHADOWS & ELEVATION
+     ============================================ */
+  --aegis-shadow-none: none;
+  --aegis-shadow-xs: 0 1px 2px rgba(22, 32, 43, 0.06);
+  --aegis-shadow-sm: 0 2px 6px rgba(22, 32, 43, 0.08);
+  --aegis-shadow-md: 0 6px 16px rgba(22, 32, 43, 0.10);
+  --aegis-shadow-lg: 0 12px 32px rgba(22, 32, 43, 0.14);
+  --aegis-shadow-focus: 0 0 0 3px rgba(47, 111, 228, 0.28);
+
+  /* ============================================
+     MOTION
+     ============================================ */
+  --aegis-motion-duration-fast: 120ms;
+  --aegis-motion-duration-base: 180ms;
+  --aegis-motion-duration-slow: 240ms;
+  --aegis-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --aegis-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --aegis-motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* ============================================
+     OPACITY
+     ============================================ */
+  --aegis-opacity-disabled: 0.48;
+  --aegis-opacity-subtle: 0.72;
+  --aegis-opacity-overlay: 0.48;
+  --aegis-opacity-scrim-strong: 0.64;
+
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+  --aegis-z-base: 0;
+  --aegis-z-dropdown: 1000;
+  --aegis-z-sticky: 1100;
+  --aegis-z-banner: 1200;
+  --aegis-z-overlay: 1300;
+  --aegis-z-modal: 1400;
+  --aegis-z-toast: 1500;
+  --aegis-z-tooltip: 1600;
+
+  /* ============================================
+     GRID & LAYOUT
+     ============================================ */
+  --aegis-layout-container-max: 1280px;
+  --aegis-layout-container-reading: 720px;
+  --aegis-layout-grid-columns: 12;
+  --aegis-layout-grid-gutter: 24px;
+  --aegis-layout-grid-margin-desktop: 32px;
+  --aegis-layout-grid-margin-tablet: 24px;
+  --aegis-layout-grid-margin-mobile: 16px;
+
+  /* ============================================
+     FOCUS & INTERACTION
+     ============================================ */
+  --aegis-focus-ring-width: 3px;
+  --aegis-focus-ring-color: rgba(47, 111, 228, 0.28);
+  --aegis-focus-ring-offset: 2px;
+  --aegis-focus-outline-color: #2F6FE4;
+
+  /* ============================================
+     ICONOGRAPHY
+     ============================================ */
+  --aegis-icon-stroke-default: 1.75;
+  --aegis-icon-size-default: 20px;
+
+  /* ============================================
+     DATA VISUALIZATION
+     ============================================ */
+  --aegis-data-vis-1: #2F6FE4;
+  --aegis-data-vis-2: #2E8F83;
+  --aegis-data-vis-3: #7B61C9;
+  --aegis-data-vis-4: #B86A00;
+  --aegis-data-vis-5: #C23A3A;
+  --aegis-data-vis-gridline: #DCE3EA;
+  --aegis-data-vis-axis: #66768A;
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --aegis-motion-duration-fast: 0ms;
+    --aegis-motion-duration-base: 0ms;
+    --aegis-motion-duration-slow: 0ms;
+  }
+}
+
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-lg);
+  line-height: var(--aegis-line-height-body-lg);
+  color: var(--aegis-color-text-primary);
+  background-color: var(--aegis-color-surface-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible baseline — keyboard-only focus ring */
+:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: var(--aegis-focus-ring-offset);
+  box-shadow: var(--aegis-shadow-focus);
+}

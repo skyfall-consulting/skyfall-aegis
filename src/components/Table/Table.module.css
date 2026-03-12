@@ -1,0 +1,55 @@
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-md);
+  line-height: var(--aegis-line-height-body-md);
+  color: var(--aegis-color-text-primary);
+}
+
+.thead {
+  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+}
+
+.th {
+  text-align: left;
+  font-weight: var(--aegis-font-weight-medium);
+  font-size: var(--aegis-font-size-label-md);
+  color: var(--aegis-color-text-secondary);
+  white-space: nowrap;
+}
+
+.td {
+  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+}
+
+/* Density: default */
+.default .th,
+.default .td {
+  padding: var(--aegis-space-3) var(--aegis-space-4);
+  height: var(--aegis-size-control-lg);
+}
+
+/* Density: compact */
+.compact .th,
+.compact .td {
+  padding: var(--aegis-space-2) var(--aegis-space-3);
+  height: var(--aegis-size-control-sm);
+  font-size: var(--aegis-font-size-body-sm);
+}
+
+/* Striped rows */
+.striped .tbody .tr:nth-child(even) {
+  background-color: var(--aegis-color-neutral-50);
+}
+
+/* Hover */
+.tbody .tr:hover {
+  background-color: var(--aegis-color-neutral-100);
+}

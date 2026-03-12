@@ -1,0 +1,16 @@
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--aegis-color-brand-primary-500);
+}
+
+.svg {
+  animation: aegis-spin 0.8s linear infinite;
+}
+
+@keyframes aegis-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

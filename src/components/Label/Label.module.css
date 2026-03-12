@@ -1,0 +1,25 @@
+.label {
+  display: block;
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-label-lg);
+  font-weight: var(--aegis-font-weight-medium);
+  line-height: var(--aegis-line-height-label-lg);
+  color: var(--aegis-color-text-primary);
+  margin-bottom: var(--aegis-space-1);
+}
+
+.required {
+  color: var(--aegis-color-error-500);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
