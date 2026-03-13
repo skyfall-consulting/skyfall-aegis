@@ -17,7 +17,8 @@
     "build": "tsup",
     "build:storybook": "storybook build",
     "typecheck": "tsc --noEmit",
-    "clean": "rm -rf dist storybook-static"
+    "clean": "rm -rf dist storybook-static",
+    "chromatic": "chromatic --project-token=chpt_7828f6d1ed3cc85 --build-script-name=build:storybook"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
@@ -30,6 +31,7 @@
     "@storybook/react-vite": "^8.6.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
+    "chromatic": "^15.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "storybook": "^8.6.0",
