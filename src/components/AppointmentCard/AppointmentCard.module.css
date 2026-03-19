@@ -1,0 +1,112 @@
+.card {
+  display: flex;
+  border-radius: var(--aegis-radius-lg);
+  background-color: var(--aegis-color-surface-default);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  font-family: var(--aegis-font-family-sans);
+  box-shadow: var(--aegis-shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
+}
+
+.statusBar {
+  width: 4px;
+  flex-shrink: 0;
+}
+
+.scheduled .statusBar { background-color: var(--aegis-color-info-500); }
+.checked-in .statusBar { background-color: var(--aegis-color-success-400); }
+.in-progress .statusBar { background-color: var(--aegis-color-warning-500); }
+.completed .statusBar { background-color: var(--aegis-color-success-600); }
+.cancelled .statusBar { background-color: var(--aegis-color-text-muted); }
+.no-show .statusBar { background-color: var(--aegis-color-error-500); }
+
+.content {
+  flex: 1;
+  padding: var(--aegis-space-4) var(--aegis-space-5);
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--aegis-space-3);
+  margin-bottom: var(--aegis-space-1);
+}
+
+.patientName {
+  margin: 0;
+  font-size: var(--aegis-font-size-body-md);
+  font-weight: var(--aegis-font-weight-semibold);
+  line-height: var(--aegis-line-height-body-md);
+  color: var(--aegis-color-text-primary);
+}
+
+.type {
+  margin: 0 0 var(--aegis-space-3);
+  font-size: var(--aegis-font-size-body-sm);
+  color: var(--aegis-color-text-secondary);
+  line-height: var(--aegis-line-height-body-sm);
+}
+
+.statusBadge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--aegis-space-1) var(--aegis-space-3);
+  border-radius: var(--aegis-radius-full);
+  font-size: var(--aegis-font-size-body-xs);
+  font-weight: var(--aegis-font-weight-medium);
+  line-height: var(--aegis-line-height-body-sm);
+}
+
+.badge-scheduled {
+  background-color: var(--aegis-color-info-50);
+  color: var(--aegis-color-info-700);
+}
+
+.badge-checked-in {
+  background-color: var(--aegis-color-success-50);
+  color: var(--aegis-color-success-700);
+}
+
+.badge-in-progress {
+  background-color: var(--aegis-color-warning-50);
+  color: var(--aegis-color-warning-700);
+}
+
+.badge-completed {
+  background-color: var(--aegis-color-success-50);
+  color: var(--aegis-color-success-700);
+}
+
+.badge-cancelled {
+  background-color: var(--aegis-color-surface-sunken);
+  color: var(--aegis-color-text-muted);
+}
+
+.badge-no-show {
+  background-color: var(--aegis-color-error-50);
+  color: var(--aegis-color-error-700);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--aegis-space-4);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-2);
+  font-size: var(--aegis-font-size-body-sm);
+  color: var(--aegis-color-text-secondary);
+  line-height: var(--aegis-line-height-body-sm);
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--aegis-color-text-muted);
+}

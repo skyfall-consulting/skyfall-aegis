@@ -1,0 +1,93 @@
+.card {
+  border-radius: var(--aegis-radius-lg);
+  background-color: var(--aegis-color-surface-default);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  padding: var(--aegis-space-5);
+  font-family: var(--aegis-font-family-sans);
+  box-shadow: var(--aegis-shadow-sm);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--aegis-space-3);
+  margin-bottom: var(--aegis-space-4);
+  padding-bottom: var(--aegis-space-4);
+  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-subtle);
+}
+
+.planInfo {
+  min-width: 0;
+}
+
+.planName {
+  margin: 0;
+  font-size: var(--aegis-font-size-heading-sm);
+  font-weight: var(--aegis-font-weight-semibold);
+  line-height: var(--aegis-line-height-heading-sm);
+  color: var(--aegis-color-text-primary);
+}
+
+.planType {
+  display: inline-block;
+  margin-top: var(--aegis-space-1);
+  font-size: var(--aegis-font-size-body-xs);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusBadge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--aegis-space-1) var(--aegis-space-3);
+  border-radius: var(--aegis-radius-full);
+  font-size: var(--aegis-font-size-body-xs);
+  font-weight: var(--aegis-font-weight-medium);
+  line-height: var(--aegis-line-height-body-sm);
+}
+
+.status-active {
+  background-color: var(--aegis-color-success-50);
+  color: var(--aegis-color-success-700);
+}
+
+.status-inactive {
+  background-color: var(--aegis-color-surface-sunken);
+  color: var(--aegis-color-text-muted);
+}
+
+.status-pending {
+  background-color: var(--aegis-color-warning-50);
+  color: var(--aegis-color-warning-700);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--aegis-space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--aegis-space-1);
+}
+
+.label {
+  font-size: var(--aegis-font-size-body-xs);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: var(--aegis-font-size-body-sm);
+  color: var(--aegis-color-text-primary);
+  line-height: var(--aegis-line-height-body-sm);
+  font-variant-numeric: tabular-nums;
+}

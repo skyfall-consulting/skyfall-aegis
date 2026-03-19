@@ -1,0 +1,141 @@
+.card {
+  border-radius: var(--aegis-radius-lg);
+  background-color: var(--aegis-color-surface-default);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  padding: var(--aegis-space-5);
+  font-family: var(--aegis-font-family-sans);
+  box-shadow: var(--aegis-shadow-sm);
+  transition: box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
+}
+
+.critical {
+  border-left: var(--aegis-border-width-strong) var(--aegis-border-style-default) var(--aegis-color-error-500);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-3);
+  margin-bottom: var(--aegis-space-4);
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--aegis-radius-full);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--aegis-color-surface-sunken);
+  color: var(--aegis-color-text-muted);
+}
+
+.identity {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: var(--aegis-font-size-heading-sm);
+  font-weight: var(--aegis-font-weight-semibold);
+  line-height: var(--aegis-line-height-heading-sm);
+  color: var(--aegis-color-text-primary);
+}
+
+.mrn {
+  font-size: var(--aegis-font-size-body-sm);
+  color: var(--aegis-color-text-muted);
+  line-height: var(--aegis-line-height-body-sm);
+}
+
+.statusBadge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--aegis-space-1) var(--aegis-space-3);
+  border-radius: var(--aegis-radius-full);
+  font-size: var(--aegis-font-size-body-xs);
+  font-weight: var(--aegis-font-weight-medium);
+  line-height: var(--aegis-line-height-body-sm);
+}
+
+.status-active {
+  background-color: var(--aegis-color-success-50);
+  color: var(--aegis-color-success-700);
+}
+
+.status-inactive {
+  background-color: var(--aegis-color-surface-sunken);
+  color: var(--aegis-color-text-muted);
+}
+
+.status-critical {
+  background-color: var(--aegis-color-error-50);
+  color: var(--aegis-color-error-700);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--aegis-space-4);
+  margin-bottom: var(--aegis-space-4);
+  padding-bottom: var(--aegis-space-4);
+  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-subtle);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--aegis-space-1);
+}
+
+.label {
+  font-size: var(--aegis-font-size-body-xs);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: var(--aegis-font-size-body-sm);
+  color: var(--aegis-color-text-primary);
+  line-height: var(--aegis-line-height-body-sm);
+}
+
+.allergies {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--aegis-space-2);
+  flex-wrap: wrap;
+}
+
+.allergiesLabel {
+  font-size: var(--aegis-font-size-body-sm);
+  font-weight: var(--aegis-font-weight-semibold);
+  color: var(--aegis-color-error-600);
+  line-height: var(--aegis-line-height-body-sm);
+  flex-shrink: 0;
+}
+
+.allergyList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--aegis-space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.allergyItem {
+  display: inline-flex;
+  padding: var(--aegis-space-1) var(--aegis-space-2);
+  background-color: var(--aegis-color-error-50);
+  color: var(--aegis-color-error-700);
+  border-radius: var(--aegis-radius-sm);
+  font-size: var(--aegis-font-size-body-xs);
+  line-height: var(--aegis-line-height-body-sm);
+}

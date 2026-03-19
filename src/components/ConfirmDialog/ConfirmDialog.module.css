@@ -1,0 +1,134 @@
+.dialog {
+  border: none;
+  border-radius: var(--aegis-radius-xl);
+  padding: 0;
+  box-shadow: var(--aegis-shadow-xl);
+  background-color: var(--aegis-color-surface-overlay);
+  width: 420px;
+  max-width: 90vw;
+}
+
+.dialog::backdrop {
+  background-color: var(--aegis-color-overlay-scrim);
+  animation: aegis-backdrop-in var(--aegis-motion-duration-slow) var(--aegis-motion-easing-standard);
+}
+
+.dialog[open] {
+  animation: aegis-dialog-in var(--aegis-motion-duration-slow) var(--aegis-motion-easing-standard);
+}
+
+.content {
+  padding: var(--aegis-space-6);
+  font-family: var(--aegis-font-family-sans);
+}
+
+.dangerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--aegis-radius-full);
+  background-color: var(--aegis-color-error-50);
+  color: var(--aegis-color-error-500);
+  margin-bottom: var(--aegis-space-4);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--aegis-font-size-heading-md);
+  font-weight: var(--aegis-font-weight-semibold);
+  line-height: var(--aegis-line-height-heading-md);
+  color: var(--aegis-color-text-primary);
+}
+
+.message {
+  margin-top: var(--aegis-space-2);
+  font-size: var(--aegis-font-size-body-md);
+  line-height: var(--aegis-line-height-body-md);
+  color: var(--aegis-color-text-secondary);
+}
+
+.message p {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--aegis-space-3);
+  margin-top: var(--aegis-space-6);
+}
+
+.cancelButton,
+.confirmButton {
+  padding: var(--aegis-space-2) var(--aegis-space-5);
+  border-radius: var(--aegis-radius-md);
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-sm);
+  font-weight: var(--aegis-font-weight-medium);
+  line-height: var(--aegis-line-height-body-md);
+  cursor: pointer;
+  transition:
+    background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.cancelButton {
+  background-color: var(--aegis-color-surface-default);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  color: var(--aegis-color-text-primary);
+}
+
+.cancelButton:hover {
+  background-color: var(--aegis-color-surface-hover);
+}
+
+.cancelButton:focus-visible,
+.confirmButton:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: var(--aegis-focus-ring-offset);
+  box-shadow: var(--aegis-shadow-focus);
+}
+
+.cancelButton:disabled,
+.confirmButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.confirmButton.default {
+  background-color: var(--aegis-color-info-600);
+  border: none;
+  color: #fff;
+}
+
+.confirmButton.default:hover:not(:disabled) {
+  background-color: var(--aegis-color-info-700);
+}
+
+.confirmButton.danger {
+  background-color: var(--aegis-color-error-600);
+  border: none;
+  color: #fff;
+}
+
+.confirmButton.danger:hover:not(:disabled) {
+  background-color: var(--aegis-color-error-700);
+}
+
+@keyframes aegis-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes aegis-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
