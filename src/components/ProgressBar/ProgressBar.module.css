@@ -1,0 +1,63 @@
+.container {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--aegis-space-2);
+}
+
+.label {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-label-md);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-primary);
+}
+
+.value {
+  font-family: var(--aegis-font-family-mono);
+  font-size: var(--aegis-font-size-body-sm);
+  color: var(--aegis-color-text-secondary);
+}
+
+.track {
+  width: 100%;
+  background-color: var(--aegis-color-neutral-100);
+  border-radius: var(--aegis-radius-full);
+  overflow: hidden;
+}
+
+/* Sizes */
+.sm {
+  height: 4px;
+}
+
+.md {
+  height: 8px;
+}
+
+/* Fill bar */
+.fill {
+  height: 100%;
+  border-radius: var(--aegis-radius-full);
+  transition: width 0.3s ease;
+}
+
+/* Variants */
+.default {
+  background-color: var(--aegis-color-brand-primary-500);
+}
+
+.success {
+  background-color: var(--aegis-color-success-500);
+}
+
+.warning {
+  background-color: var(--aegis-color-warning-500);
+}
+
+.error {
+  background-color: var(--aegis-color-error-500);
+}

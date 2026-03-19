@@ -1,0 +1,57 @@
+.list {
+  margin: 0;
+  padding: 0;
+  font-family: var(--aegis-font-family-sans);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.term {
+  font-size: var(--aegis-font-size-label-md);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-muted);
+  margin-bottom: var(--aegis-space-1);
+}
+
+.definition {
+  margin: 0;
+  font-size: var(--aegis-font-size-body-md);
+  line-height: var(--aegis-line-height-body-md);
+  color: var(--aegis-color-text-primary);
+}
+
+/* Vertical layout */
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--aegis-space-4);
+}
+
+/* Horizontal layout */
+.horizontal .item {
+  flex-direction: row;
+  align-items: baseline;
+  gap: var(--aegis-space-3);
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--aegis-space-3);
+}
+
+.horizontal .term {
+  flex-shrink: 0;
+  min-width: 140px;
+  margin-bottom: 0;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--dl-columns, 2), 1fr);
+  gap: var(--aegis-space-4) var(--aegis-space-6);
+}

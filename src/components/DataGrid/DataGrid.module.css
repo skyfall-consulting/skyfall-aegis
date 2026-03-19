@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+}
+
+/* Sticky header */
+.stickyHeader thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--aegis-color-surface-default);
+}
+
+/* Comfortable density */
+.comfortable th,
+.comfortable td {
+  padding: var(--aegis-space-4) var(--aegis-space-5);
+  height: var(--aegis-size-control-lg);
+}
+
+/* Sort button */
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--aegis-space-1);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  font-weight: var(--aegis-font-weight-medium);
+  white-space: nowrap;
+}
+
+.sortButton:hover {
+  color: var(--aegis-color-text-primary);
+}
+
+.sortButton:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: 2px;
+  border-radius: var(--aegis-radius-sm);
+}
+
+.sortIcon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Checkbox */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--aegis-color-brand-primary-500);
+}
+
+/* Selected row */
+.selectedRow {
+  background-color: var(--aegis-color-brand-primary-50, rgba(59, 130, 246, 0.06)) !important;
+}
+
+/* Clickable row */
+.clickableRow {
+  cursor: pointer;
+}
+
+.clickableRow:hover {
+  background-color: var(--aegis-color-neutral-100);
+}

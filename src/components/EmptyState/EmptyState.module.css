@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--aegis-space-12) var(--aegis-space-6);
+  text-align: center;
+}
+
+.icon {
+  margin-bottom: var(--aegis-space-4);
+  color: var(--aegis-color-text-muted);
+  font-size: 48px;
+  line-height: 1;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-heading-sm);
+  font-weight: var(--aegis-font-weight-semibold);
+  line-height: var(--aegis-line-height-heading-sm);
+  color: var(--aegis-color-text-primary);
+}
+
+.description {
+  margin: var(--aegis-space-2) 0 0;
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-md);
+  line-height: var(--aegis-line-height-body-md);
+  color: var(--aegis-color-text-muted);
+  max-width: 360px;
+}
+
+.action {
+  margin-top: var(--aegis-space-6);
+}
