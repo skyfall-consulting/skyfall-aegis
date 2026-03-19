@@ -14,25 +14,30 @@
   font-family: var(--aegis-font-family-sans);
   padding-right: var(--aegis-space-10);
   cursor: pointer;
+  box-shadow: var(--aegis-shadow-inset-xs);
   transition:
-    border-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
-    box-shadow var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+    border-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    background-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
 }
 
 .select:hover:not(:disabled) {
   border-color: var(--aegis-color-border-strong);
+  background-color: var(--aegis-color-surface-hover);
 }
 
 .select:focus {
   outline: none;
   border-color: var(--aegis-color-brand-primary-500);
   box-shadow: var(--aegis-shadow-focus);
+  background-color: var(--aegis-color-surface-default);
 }
 
 .select:disabled {
   cursor: not-allowed;
   opacity: var(--aegis-opacity-disabled);
   background-color: var(--aegis-color-surface-subtle);
+  box-shadow: none;
 }
 
 .sm {
@@ -58,7 +63,7 @@
 }
 
 .error:focus {
-  box-shadow: 0 0 0 3px rgba(194, 58, 58, 0.2);
+  box-shadow: var(--aegis-shadow-focus-error);
 }
 
 .fullWidth {

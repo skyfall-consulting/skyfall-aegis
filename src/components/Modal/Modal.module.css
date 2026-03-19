@@ -2,8 +2,8 @@
   border: none;
   border-radius: var(--aegis-radius-xl);
   padding: 0;
-  box-shadow: var(--aegis-shadow-lg);
-  background-color: var(--aegis-color-surface-default);
+  box-shadow: var(--aegis-shadow-xl);
+  background-color: var(--aegis-color-surface-overlay);
   max-height: 85vh;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,7 @@
 
 .dialog::backdrop {
   background-color: var(--aegis-color-overlay-scrim);
+  animation: aegis-backdrop-in var(--aegis-motion-duration-slow) var(--aegis-motion-easing-standard);
 }
 
 .dialog[open] {
@@ -35,6 +36,7 @@
   justify-content: space-between;
   padding: var(--aegis-space-6) var(--aegis-space-6) var(--aegis-space-4);
   flex-shrink: 0;
+  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-subtle);
 }
 
 .title {
@@ -58,10 +60,13 @@
   color: var(--aegis-color-text-muted);
   cursor: pointer;
   flex-shrink: 0;
+  transition:
+    background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
+    color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
 }
 
 .close:hover {
-  background-color: var(--aegis-color-surface-subtle);
+  background-color: var(--aegis-color-surface-hover);
   color: var(--aegis-color-text-primary);
 }
 
@@ -88,6 +93,7 @@
   gap: var(--aegis-space-3);
   padding: var(--aegis-space-4) var(--aegis-space-6) var(--aegis-space-6);
   flex-shrink: 0;
+  border-top: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-subtle);
 }
 
 @keyframes aegis-modal-in {
@@ -98,5 +104,14 @@
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes aegis-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

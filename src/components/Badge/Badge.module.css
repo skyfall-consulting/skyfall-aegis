@@ -6,7 +6,7 @@
   border-radius: var(--aegis-radius-full);
   font-family: var(--aegis-font-family-sans);
   font-size: var(--aegis-font-size-caption);
-  font-weight: var(--aegis-font-weight-medium);
+  font-weight: var(--aegis-font-weight-semibold);
   line-height: var(--aegis-line-height-caption);
   white-space: nowrap;
 }
@@ -14,24 +14,29 @@
 .neutral {
   background-color: var(--aegis-color-neutral-100);
   color: var(--aegis-color-text-secondary);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-neutral-200);
 }
 
 .success {
   background-color: var(--aegis-color-success-50);
   color: var(--aegis-color-success-700);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-success);
 }
 
 .warning {
   background-color: var(--aegis-color-warning-50);
   color: var(--aegis-color-warning-700);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-warning);
 }
 
 .error {
   background-color: var(--aegis-color-error-50);
   color: var(--aegis-color-error-700);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-error);
 }
 
 .info {
   background-color: var(--aegis-color-info-50);
   color: var(--aegis-color-info-700);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-brand);
 }

@@ -15,6 +15,7 @@
 
 .thead {
   border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  background-color: var(--aegis-color-surface-subtle);
 }
 
 .th {
@@ -26,7 +27,8 @@
 }
 
 .td {
-  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-subtle);
+  transition: background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
 }
 
 /* Density: default */
@@ -51,5 +53,14 @@
 
 /* Hover */
 .tbody .tr:hover {
-  background-color: var(--aegis-color-neutral-100);
+  background-color: var(--aegis-color-surface-hover);
+}
+
+/* Selected row */
+.tbody .tr.selected {
+  background-color: var(--aegis-color-surface-selected);
+}
+
+.tbody .tr.selected:hover {
+  background-color: var(--aegis-color-surface-selected-hover);
 }

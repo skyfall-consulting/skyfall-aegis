@@ -30,20 +30,28 @@
   background-color: var(--aegis-color-surface-default);
   color: transparent;
   flex-shrink: 0;
+  box-shadow: var(--aegis-shadow-inset-xs);
   transition:
-    background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
-    border-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
-    color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+    background-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    border-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
 }
 
 .wrapper:hover .control {
   border-color: var(--aegis-color-border-strong);
+  background-color: var(--aegis-color-surface-hover);
 }
 
 .input:checked + .control {
-  background-color: var(--aegis-color-brand-primary-500);
-  border-color: var(--aegis-color-brand-primary-500);
+  background: linear-gradient(
+    180deg,
+    var(--aegis-color-brand-primary-500) 0%,
+    var(--aegis-color-brand-primary-600) 100%
+  );
+  border-color: var(--aegis-color-brand-primary-600);
   color: var(--aegis-color-text-inverse);
+  box-shadow: var(--aegis-shadow-xs);
 }
 
 .input:focus-visible + .control {

@@ -6,8 +6,10 @@
   border-radius: var(--aegis-radius-md);
   cursor: pointer;
   transition:
-    background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
-    box-shadow var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+    background-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    border-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
   padding: 0;
   flex-shrink: 0;
 }
@@ -39,22 +41,45 @@
 }
 
 .primary {
-  background-color: var(--aegis-color-brand-primary-500);
+  background: linear-gradient(
+    180deg,
+    var(--aegis-color-brand-primary-500) 0%,
+    var(--aegis-color-brand-primary-600) 100%
+  );
   color: var(--aegis-color-text-inverse);
+  box-shadow: var(--aegis-shadow-xs);
 }
 
 .primary:hover:not(:disabled) {
-  background-color: var(--aegis-color-brand-primary-600);
+  background: linear-gradient(
+    180deg,
+    var(--aegis-color-brand-primary-600) 0%,
+    var(--aegis-color-brand-primary-700) 100%
+  );
+  box-shadow: var(--aegis-shadow-sm);
+}
+
+.primary:active:not(:disabled) {
+  background: var(--aegis-color-brand-primary-700);
+  box-shadow: var(--aegis-shadow-inset-xs);
 }
 
 .secondary {
   background-color: var(--aegis-color-surface-default);
   color: var(--aegis-color-text-primary);
   border-color: var(--aegis-color-border-default);
+  box-shadow: var(--aegis-shadow-xs);
 }
 
 .secondary:hover:not(:disabled) {
-  background-color: var(--aegis-color-surface-subtle);
+  background-color: var(--aegis-color-surface-hover);
+  border-color: var(--aegis-color-border-strong);
+  box-shadow: var(--aegis-shadow-sm);
+}
+
+.secondary:active:not(:disabled) {
+  background-color: var(--aegis-color-surface-active);
+  box-shadow: var(--aegis-shadow-inset-xs);
 }
 
 .ghost {
@@ -63,8 +88,12 @@
 }
 
 .ghost:hover:not(:disabled) {
-  background-color: var(--aegis-color-surface-subtle);
+  background-color: var(--aegis-color-surface-hover);
   color: var(--aegis-color-text-primary);
+}
+
+.ghost:active:not(:disabled) {
+  background-color: var(--aegis-color-surface-active);
 }
 
 .danger {
@@ -74,4 +103,10 @@
 
 .danger:hover:not(:disabled) {
   background-color: var(--aegis-color-error-50);
+  color: var(--aegis-color-error-700);
+}
+
+.danger:active:not(:disabled) {
+  background-color: var(--aegis-color-error-50);
+  box-shadow: var(--aegis-shadow-inset-xs);
 }

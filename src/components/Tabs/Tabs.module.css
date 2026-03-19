@@ -22,12 +22,14 @@
   cursor: pointer;
   white-space: nowrap;
   transition:
-    color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
-    border-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+    color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    border-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    background-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
 }
 
 .tab:hover:not(:disabled) {
   color: var(--aegis-color-text-primary);
+  background-color: var(--aegis-color-surface-hover);
 }
 
 .tab:focus-visible {
@@ -45,6 +47,12 @@
 .active {
   color: var(--aegis-color-brand-primary-500);
   border-bottom-color: var(--aegis-color-brand-primary-500);
+  font-weight: var(--aegis-font-weight-semibold);
+}
+
+.active:hover:not(:disabled) {
+  color: var(--aegis-color-brand-primary-600);
+  background-color: transparent;
 }
 
 .panel {

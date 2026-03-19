@@ -9,9 +9,10 @@
   font-weight: var(--aegis-font-weight-medium);
   cursor: pointer;
   transition:
-    background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
-    border-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
-    box-shadow var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+    background-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    border-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    transform var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
   white-space: nowrap;
   user-select: none;
   text-decoration: none;
@@ -50,31 +51,45 @@
 
 /* Variants */
 .primary {
-  background-color: var(--aegis-color-brand-primary-500);
+  background: linear-gradient(
+    180deg,
+    var(--aegis-color-brand-primary-500) 0%,
+    var(--aegis-color-brand-primary-600) 100%
+  );
   color: var(--aegis-color-text-inverse);
+  box-shadow: var(--aegis-shadow-xs);
 }
 
 .primary:hover:not(:disabled) {
-  background-color: var(--aegis-color-brand-primary-600);
+  background: linear-gradient(
+    180deg,
+    var(--aegis-color-brand-primary-600) 0%,
+    var(--aegis-color-brand-primary-700) 100%
+  );
+  box-shadow: var(--aegis-shadow-sm);
 }
 
 .primary:active:not(:disabled) {
-  background-color: var(--aegis-color-brand-primary-700);
+  background: var(--aegis-color-brand-primary-700);
+  box-shadow: var(--aegis-shadow-inset-xs);
 }
 
 .secondary {
   background-color: var(--aegis-color-surface-default);
   color: var(--aegis-color-text-primary);
   border-color: var(--aegis-color-border-default);
+  box-shadow: var(--aegis-shadow-xs);
 }
 
 .secondary:hover:not(:disabled) {
-  background-color: var(--aegis-color-surface-subtle);
+  background-color: var(--aegis-color-surface-hover);
   border-color: var(--aegis-color-border-strong);
+  box-shadow: var(--aegis-shadow-sm);
 }
 
 .secondary:active:not(:disabled) {
-  background-color: var(--aegis-color-neutral-100);
+  background-color: var(--aegis-color-surface-active);
+  box-shadow: var(--aegis-shadow-inset-xs);
 }
 
 .ghost {
@@ -91,16 +106,23 @@
 }
 
 .danger {
-  background-color: var(--aegis-color-error-500);
+  background: linear-gradient(
+    180deg,
+    var(--aegis-color-error-500) 0%,
+    var(--aegis-color-error-700) 100%
+  );
   color: var(--aegis-color-text-inverse);
+  box-shadow: var(--aegis-shadow-xs);
 }
 
 .danger:hover:not(:disabled) {
-  background-color: var(--aegis-color-error-700);
+  background: var(--aegis-color-error-700);
+  box-shadow: var(--aegis-shadow-sm);
 }
 
 .danger:active:not(:disabled) {
-  background-color: #7A2020;
+  background: #7A2020;
+  box-shadow: var(--aegis-shadow-inset-xs);
 }
 
 /* Full width */

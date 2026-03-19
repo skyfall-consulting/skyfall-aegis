@@ -10,7 +10,7 @@
   z-index: var(--aegis-z-tooltip);
   padding: var(--aegis-space-1) var(--aegis-space-2);
   border-radius: var(--aegis-radius-sm);
-  background-color: var(--aegis-color-neutral-800);
+  background-color: var(--aegis-color-neutral-900);
   color: var(--aegis-color-text-inverse);
   font-family: var(--aegis-font-family-sans);
   font-size: var(--aegis-font-size-caption);

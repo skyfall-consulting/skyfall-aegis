@@ -29,8 +29,11 @@
   border-radius: var(--aegis-radius-full);
   background-color: var(--aegis-color-surface-default);
   flex-shrink: 0;
+  box-shadow: var(--aegis-shadow-inset-xs);
   transition:
-    border-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+    border-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    background-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
 }
 
 .dot {
@@ -38,19 +41,26 @@
   height: 8px;
   border-radius: var(--aegis-radius-full);
   background-color: transparent;
-  transition: background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+  transition:
+    background-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard),
+    transform var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
+  transform: scale(0);
 }
 
 .wrapper:hover .control {
   border-color: var(--aegis-color-border-strong);
+  background-color: var(--aegis-color-surface-hover);
 }
 
 .input:checked + .control {
   border-color: var(--aegis-color-brand-primary-500);
+  background-color: var(--aegis-color-surface-default);
+  box-shadow: var(--aegis-shadow-xs);
 }
 
 .input:checked + .control .dot {
   background-color: var(--aegis-color-brand-primary-500);
+  transform: scale(1);
 }
 
 .input:focus-visible + .control {

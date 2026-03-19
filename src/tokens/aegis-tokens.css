@@ -81,10 +81,21 @@
   --aegis-color-surface-default: #FFFFFF;
   --aegis-color-surface-subtle: #F6F8FA;
   --aegis-color-surface-raised: #FFFFFF;
+  --aegis-color-surface-overlay: #FFFFFF;
+  --aegis-color-surface-sunken: #F0F3F7;
+  --aegis-color-surface-hover: #F0F4F8;
+  --aegis-color-surface-active: #E6ECF2;
+  --aegis-color-surface-selected: #EEF4FF;
+  --aegis-color-surface-selected-hover: #DCE8FF;
 
   --aegis-color-border-default: #DCE3EA;
   --aegis-color-border-strong: #C1CBD6;
+  --aegis-color-border-subtle: #EDF1F5;
   --aegis-color-border-inverse: #334155;
+  --aegis-color-border-brand: #2F6FE4;
+  --aegis-color-border-success: #2F8F57;
+  --aegis-color-border-warning: #B86A00;
+  --aegis-color-border-error: #C23A3A;
 
   --aegis-color-focus-ring: #2F6FE4;
   --aegis-color-overlay-scrim: rgba(22, 32, 43, 0.48);
@@ -196,11 +207,16 @@
      SHADOWS & ELEVATION
      ============================================ */
   --aegis-shadow-none: none;
-  --aegis-shadow-xs: 0 1px 2px rgba(22, 32, 43, 0.06);
-  --aegis-shadow-sm: 0 2px 6px rgba(22, 32, 43, 0.08);
-  --aegis-shadow-md: 0 6px 16px rgba(22, 32, 43, 0.10);
-  --aegis-shadow-lg: 0 12px 32px rgba(22, 32, 43, 0.14);
+  --aegis-shadow-xs: 0 1px 2px rgba(22, 32, 43, 0.05);
+  --aegis-shadow-sm: 0 1px 3px rgba(22, 32, 43, 0.06), 0 2px 8px rgba(22, 32, 43, 0.04);
+  --aegis-shadow-md: 0 2px 4px rgba(22, 32, 43, 0.04), 0 8px 20px rgba(22, 32, 43, 0.08);
+  --aegis-shadow-lg: 0 4px 8px rgba(22, 32, 43, 0.04), 0 16px 40px rgba(22, 32, 43, 0.12);
+  --aegis-shadow-xl: 0 8px 16px rgba(22, 32, 43, 0.06), 0 24px 56px rgba(22, 32, 43, 0.16);
   --aegis-shadow-focus: 0 0 0 3px rgba(47, 111, 228, 0.28);
+  --aegis-shadow-focus-error: 0 0 0 3px rgba(194, 58, 58, 0.2);
+  --aegis-shadow-focus-success: 0 0 0 3px rgba(47, 143, 87, 0.2);
+  --aegis-shadow-inset-xs: inset 0 1px 2px rgba(22, 32, 43, 0.06);
+  --aegis-shadow-inset-sm: inset 0 2px 4px rgba(22, 32, 43, 0.08);
 
   /* ============================================
      MOTION
@@ -256,6 +272,15 @@
      ============================================ */
   --aegis-icon-stroke-default: 1.75;
   --aegis-icon-size-default: 20px;
+
+  /* ============================================
+     INTERACTIVE STATES
+     ============================================ */
+  --aegis-state-hover-overlay: rgba(22, 32, 43, 0.04);
+  --aegis-state-active-overlay: rgba(22, 32, 43, 0.08);
+  --aegis-state-selected-bg: #EEF4FF;
+  --aegis-state-selected-border: #BED4FF;
+  --aegis-state-drag-bg: #F6F8FA;
 
   /* ============================================
      DATA VISUALIZATION

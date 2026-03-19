@@ -4,6 +4,10 @@
   width: 100%;
 }
 
+.light {
+  border-top-color: var(--aegis-color-border-subtle);
+}
+
 .none { margin: 0; }
 .sm { margin: var(--aegis-space-2) 0; }
 .md { margin: var(--aegis-space-4) 0; }

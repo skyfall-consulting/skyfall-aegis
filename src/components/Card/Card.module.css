@@ -2,6 +2,7 @@
   border-radius: var(--aegis-radius-lg);
   background-color: var(--aegis-color-surface-default);
   border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  transition: box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
 }
 
 /* Elevation */
@@ -11,6 +12,13 @@
 
 .raised {
   box-shadow: var(--aegis-shadow-sm);
+  border-bottom: var(--aegis-border-width-medium) var(--aegis-border-style-default) var(--aegis-color-border-subtle);
+}
+
+.elevated {
+  box-shadow: var(--aegis-shadow-md);
+  border-color: var(--aegis-color-border-subtle);
+  border-bottom: var(--aegis-border-width-medium) var(--aegis-border-style-default) var(--aegis-color-border-default);
 }
 
 /* Padding */
