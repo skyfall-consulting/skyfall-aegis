@@ -1,0 +1,41 @@
+.topNav {
+  width: 100%;
+  height: 56px;
+  background-color: var(--aegis-color-surface-default);
+  border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  box-shadow: var(--aegis-shadow-sm);
+  font-family: var(--aegis-font-family-sans);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--aegis-space-5);
+  gap: var(--aegis-space-6);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: var(--aegis-font-size-heading-sm);
+  font-weight: var(--aegis-font-weight-bold);
+  color: var(--aegis-color-text-primary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-1);
+  flex: 1;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-3);
+  flex-shrink: 0;
+  margin-left: auto;
+}

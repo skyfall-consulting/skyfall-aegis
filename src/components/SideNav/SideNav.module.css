@@ -1,0 +1,121 @@
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  background-color: var(--aegis-color-surface-default);
+  border-right: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  box-shadow: var(--aegis-shadow-sm);
+  font-family: var(--aegis-font-family-sans);
+  padding: var(--aegis-space-2) 0;
+  transition: width var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
+}
+
+.collapsed {
+  width: 56px;
+}
+
+.collapseToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--aegis-space-2) var(--aegis-space-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--aegis-color-text-muted);
+  transition: color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.collapseToggle:hover {
+  color: var(--aegis-color-text-primary);
+}
+
+.collapseToggle:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: calc(-1 * var(--aegis-border-width-medium));
+  box-shadow: var(--aegis-shadow-focus);
+  border-radius: var(--aegis-radius-sm);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.subList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-3);
+  width: 100%;
+  padding: var(--aegis-space-2) var(--aegis-space-4);
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: var(--aegis-font-size-body-sm);
+  line-height: var(--aegis-line-height-body-sm);
+  font-weight: var(--aegis-font-weight-regular);
+  color: var(--aegis-color-text-secondary);
+  text-decoration: none;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
+    color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.navItem:hover {
+  background-color: var(--aegis-color-surface-hover);
+  color: var(--aegis-color-text-primary);
+}
+
+.navItem:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: calc(-1 * var(--aegis-border-width-medium));
+  box-shadow: var(--aegis-shadow-focus);
+  border-radius: var(--aegis-radius-sm);
+  z-index: 1;
+  position: relative;
+}
+
+.active {
+  background-color: var(--aegis-color-brand-primary-50);
+  color: var(--aegis-color-brand-primary-700);
+  font-weight: var(--aegis-font-weight-medium);
+}
+
+.active:hover {
+  background-color: var(--aegis-color-brand-primary-100);
+}
+
+.nested {
+  padding-left: var(--aegis-space-8);
+}
+
+.iconOnly {
+  justify-content: center;
+  padding: var(--aegis-space-2);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
