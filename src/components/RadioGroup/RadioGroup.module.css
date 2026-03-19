@@ -1,0 +1,35 @@
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend {
+  display: block;
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-label-lg);
+  font-weight: var(--aegis-font-weight-medium);
+  line-height: var(--aegis-line-height-label-lg);
+  color: var(--aegis-color-text-primary);
+  margin-bottom: var(--aegis-space-2);
+  padding: 0;
+}
+
+.options {
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+  gap: var(--aegis-space-2);
+}
+
+.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--aegis-space-4);
+}
+
+.fieldset:disabled {
+  opacity: var(--aegis-opacity-disabled);
+}
