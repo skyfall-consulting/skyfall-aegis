@@ -1,0 +1,16 @@
+import { addons } from '@storybook/manager-api';
+import skyfallAegisTheme from './skyfallAegisTheme';
+
+addons.setConfig({
+  theme: skyfallAegisTheme,
+  sidebar: {
+    showRoots: true,
+  },
+  toolbar: {
+    title: { hidden: false },
+    zoom: { hidden: false },
+    eject: { hidden: false },
+    copy: { hidden: false },
+    fullscreen: { hidden: false },
+  },
+});

@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react';
+import skyfallAegisTheme from './skyfallAegisTheme';
 import '../src/tokens/aegis-tokens.css';
 
 const preview: Preview = {
@@ -8,6 +9,9 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    docs: {
+      theme: skyfallAegisTheme,
     },
     a11y: {
       test: 'error',
