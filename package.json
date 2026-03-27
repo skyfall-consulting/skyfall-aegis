@@ -36,7 +36,7 @@
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist storybook-static",
     "prepublishOnly": "npm run clean && npm run build",
-    "chromatic": "chromatic --build-script-name=build:storybook"
+    "chromatic": "chromatic --project-token=chpt_7828f6d1ed3cc85 --build-script-name=build:storybook"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
