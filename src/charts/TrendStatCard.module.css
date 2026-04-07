@@ -1,0 +1,100 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--aegis-color-surface-default);
+  border: var(--aegis-border-width-hairline) solid var(--aegis-color-border-default);
+  border-radius: var(--aegis-radius-lg);
+  box-shadow: var(--aegis-shadow-sm);
+  padding: var(--aegis-space-5);
+  gap: var(--aegis-space-2);
+  font-family: var(--aegis-font-family-sans);
+  transition: box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--aegis-shadow-md);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--aegis-space-3);
+}
+
+.label {
+  font-size: var(--aegis-font-size-label-md);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--aegis-tracking-wide);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--aegis-space-1);
+  padding: 2px var(--aegis-space-2);
+  border-radius: var(--aegis-radius-full);
+  font-size: var(--aegis-font-size-caption);
+  font-weight: var(--aegis-font-weight-semibold);
+  border: var(--aegis-border-width-hairline) solid currentColor;
+  background-color: transparent;
+}
+
+.up {
+  color: var(--aegis-color-success-700);
+  background-color: var(--aegis-color-success-50);
+  border-color: var(--aegis-color-border-success);
+}
+
+.down {
+  color: var(--aegis-color-error-700);
+  background-color: var(--aegis-color-error-50);
+  border-color: var(--aegis-color-border-error);
+}
+
+.neutral {
+  color: var(--aegis-color-text-muted);
+  background-color: var(--aegis-color-surface-subtle);
+  border-color: var(--aegis-color-border-default);
+}
+
+.valueRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--aegis-space-2);
+  margin-top: var(--aegis-space-1);
+}
+
+.value {
+  font-size: var(--aegis-font-size-display-md);
+  line-height: var(--aegis-line-height-display-md);
+  font-weight: var(--aegis-font-weight-semibold);
+  color: var(--aegis-color-text-primary);
+  letter-spacing: var(--aegis-tracking-tight);
+  font-variant-numeric: tabular-nums;
+}
+
+.unit {
+  font-size: var(--aegis-font-size-body-md);
+  color: var(--aegis-color-text-muted);
+  font-weight: var(--aegis-font-weight-medium);
+}
+
+.changeLabel {
+  font-size: var(--aegis-font-size-caption);
+  color: var(--aegis-color-text-muted);
+}
+
+.chartWrap {
+  width: calc(100% + var(--aegis-space-10));
+  margin: var(--aegis-space-2) calc(var(--aegis-space-5) * -1) calc(var(--aegis-space-5) * -1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

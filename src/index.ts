@@ -5,6 +5,9 @@ export * from './tokens';
 // Components
 export * from './components';
 
+// Data visualization (Recharts-based)
+export * from './charts';
+
 // Utilities
 export { cn } from './utils/cn';
 

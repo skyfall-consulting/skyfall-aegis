@@ -1,0 +1,97 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(180px, 1fr);
+  gap: var(--aegis-space-6);
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartWrap {
+  position: relative;
+  width: 100%;
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.centerLabel {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-display-md);
+  line-height: 1;
+  font-weight: var(--aegis-font-weight-semibold);
+  color: var(--aegis-color-text-primary);
+  letter-spacing: var(--aegis-tracking-tight);
+  font-variant-numeric: tabular-nums;
+}
+
+.centerSub {
+  margin-top: var(--aegis-space-1);
+  font-size: var(--aegis-font-size-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--aegis-tracking-wide);
+  color: var(--aegis-color-text-secondary);
+  font-weight: var(--aegis-font-weight-medium);
+}
+
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--aegis-space-2);
+}
+
+.legendItem {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  align-items: center;
+  gap: var(--aegis-space-3);
+  padding: var(--aegis-space-2) 0;
+  border-bottom: var(--aegis-border-width-hairline) solid var(--aegis-color-border-subtle);
+  font-size: var(--aegis-font-size-body-sm);
+}
+
+.legendItem:last-child {
+  border-bottom: none;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--aegis-radius-sm);
+}
+
+.legendLabel {
+  color: var(--aegis-color-text-secondary);
+}
+
+.legendValue {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--aegis-space-2);
+  font-family: var(--aegis-font-family-mono);
+  font-weight: var(--aegis-font-weight-semibold);
+  color: var(--aegis-color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.legendPct {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-caption);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-muted);
+}

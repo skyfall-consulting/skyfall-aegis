@@ -1,6 +1,6 @@
 {
   "name": "@skyfall_ai/aegis",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Skyfall Aegis — Accessibility-forward, compliance-aware healthcare design system",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -40,7 +40,13 @@
   },
   "peerDependencies": {
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "recharts": ">=2.10.0"
+  },
+  "peerDependenciesMeta": {
+    "recharts": {
+      "optional": false
+    }
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^8.6.0",
@@ -52,6 +58,7 @@
     "chromatic": "^15.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
+    "recharts": "^2.15.4",
     "storybook": "^8.6.0",
     "tsup": "^8.3.0",
     "typescript": "^5.6.0",

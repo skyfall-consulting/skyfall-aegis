@@ -38,6 +38,11 @@ const trendIcons: Record<string, ReactNode> = {
 /**
  * StatCard — displays a key metric with optional trend indicator.
  *
+ * @deprecated Prefer {@link KpiStatCard} from `@skyfall_ai/aegis` for new
+ * dashboards. KpiStatCard supports inline sparklines, inverse trend
+ * semantics, and integrates with the Aegis charting system. StatCard will
+ * continue to work for existing usage.
+ *
  * Accessibility:
  * - Trend icons are aria-hidden; meaning conveyed via visible text
  * - Uses semantic structure with clear label/value relationship
