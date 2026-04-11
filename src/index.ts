@@ -1,5 +1,5 @@
-// Design tokens (CSS variables are the primary token delivery mechanism)
-// Import '@skyfall/aegis/dist/tokens/aegis-tokens.css' in your app
+// Design tokens — CSS custom properties (loaded automatically)
+import './tokens/aegis-tokens.css';
 export * from './tokens';
 
 // Components
