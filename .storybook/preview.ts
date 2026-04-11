@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react';
 import skyfallAegisTheme from './skyfallAegisTheme';
 import '../src/tokens/aegis-tokens.css';
+import './storybook.css';
 
 const preview: Preview = {
   parameters: {
@@ -17,10 +18,11 @@ const preview: Preview = {
       test: 'error',
     },
     backgrounds: {
+      default: 'White',
       values: [
-        { name: 'Canvas', value: '#FCFDFE' },
         { name: 'White', value: '#FFFFFF' },
-        { name: 'Subtle', value: '#F6F8FA' },
+        { name: 'Canvas', value: '#FAFBFC' },
+        { name: 'Subtle', value: '#F5F7FA' },
         { name: 'Dark', value: '#16202B' },
       ],
     },

@@ -1,49 +1,49 @@
 import { create } from '@storybook/theming/create';
 
 export default create({
-  base: 'dark',
+  base: 'light',
 
   // Brand
   brandTitle: 'Skyfall Aegis',
   brandUrl: 'https://skyfall.consulting',
-  brandImage: '/skyfall_aegis_logo.png',
+  brandImage: '/aegis_logo_blue.png',
   brandTarget: '_self',
 
-  // Colors — dark premium palette with selective gold accent
-  colorPrimary: '#C8A24E',
-  colorSecondary: '#C8A24E',
+  // Colors — clean blue accent
+  colorPrimary: '#1A73E8',
+  colorSecondary: '#1A73E8',
 
-  // UI chrome
-  appBg: '#0F1318',
-  appContentBg: '#151A21',
-  appPreviewBg: '#FCFDFE',
-  appBorderColor: '#2A3140',
-  appBorderRadius: 6,
+  // UI chrome — white and airy
+  appBg: '#FAFBFC',
+  appContentBg: '#FFFFFF',
+  appPreviewBg: '#FFFFFF',
+  appBorderColor: '#E5E8EB',
+  appBorderRadius: 8,
 
   // Text
-  textColor: '#E2E6EC',
-  textInverseColor: '#0F1318',
-  textMutedColor: '#8892A0',
+  textColor: '#1A2332',
+  textInverseColor: '#FFFFFF',
+  textMutedColor: '#6B7685',
 
   // Toolbar
-  barTextColor: '#8892A0',
-  barHoverColor: '#C8A24E',
-  barSelectedColor: '#C8A24E',
-  barBg: '#12171E',
+  barTextColor: '#6B7685',
+  barHoverColor: '#1A73E8',
+  barSelectedColor: '#1A73E8',
+  barBg: '#FFFFFF',
 
   // Inputs
-  inputBg: '#1A2028',
-  inputBorder: '#2A3140',
-  inputTextColor: '#E2E6EC',
-  inputBorderRadius: 4,
+  inputBg: '#FFFFFF',
+  inputBorder: '#DFE3E8',
+  inputTextColor: '#1A2332',
+  inputBorderRadius: 6,
 
   // Booleans
-  booleanBg: '#1A2028',
-  booleanSelectedBg: '#C8A24E',
+  booleanBg: '#F0F2F5',
+  booleanSelectedBg: '#1A73E8',
 
   // Button
-  buttonBg: '#1E2530',
-  buttonBorder: '#2A3140',
+  buttonBg: '#F5F7FA',
+  buttonBorder: '#DFE3E8',
 
   // Grid
   gridCellSize: 12,
