@@ -7,3 +7,10 @@ storybook-static/
 .env.local
 
 *storybook.log
+
+# Claude worktrees
+.claude/worktrees/
+
+# Non-source assets
+Logo/
+Style Guide V1/
