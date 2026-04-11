@@ -35,7 +35,13 @@ const preview: Preview = {
           'Components',
           [
             'Foundations',
-            ['Tokens', 'Themes', 'Icons', 'Typography'],
+            [
+              'Tokens',
+              ['Colors', 'Typography', 'Spacing', 'Radius', 'Shadows', 'Motion', 'Focus'],
+              'Theme',
+              'Icons',
+              'Typography',
+            ],
             'Inputs',
             'Data Display',
             'Feedback',

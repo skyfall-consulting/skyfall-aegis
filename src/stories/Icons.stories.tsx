@@ -1,14 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fontFamily } from '../tokens/typography';
-import { text, brandPrimary, semantic, neutral } from '../tokens/colors';
-
-/**
- * Aegis does not ship its own icon set — the design system is icon-library-agnostic.
- * Consumers should use Lucide, Heroicons, Phosphor, or any SVG icon set and apply
- * Aegis color tokens for consistency.
- *
- * This page demonstrates the integration pattern.
- */
+import { text, brandPrimary, semantic, neutral, border } from '../tokens/colors';
 
 const EXAMPLE_ICONS = [
   { name: 'Heart', path: 'M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z' },
@@ -31,12 +23,18 @@ const SvgIcon = ({ path, size = 20, color = 'currentColor', strokeWidth = 1.75 }
   </svg>
 );
 
+const SectionTitle = ({ children }: { children: React.ReactNode }) => (
+  <h2 style={{ fontSize: 13, fontWeight: 600, color: text.muted, textTransform: 'uppercase', letterSpacing: '0.06em', margin: '0 0 16px', paddingBottom: 8, borderBottom: `1px solid ${border.default}` }}>
+    {children}
+  </h2>
+);
+
 const IconCell = ({ name, path, color }: { name: string; path: string; color: string }) => (
-  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, width: 80 }}>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
     <div
       style={{
-        width: 48,
-        height: 48,
+        width: 52,
+        height: 52,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -47,59 +45,50 @@ const IconCell = ({ name, path, color }: { name: string; path: string; color: st
     >
       <SvgIcon path={path} color={color} />
     </div>
-    <span style={{ fontFamily: 'monospace', fontSize: 11, color: text.muted, textAlign: 'center' }}>{name}</span>
+    <span style={{ fontFamily: fontFamily.mono, fontSize: 11, color: text.muted, textAlign: 'center' }}>{name}</span>
   </div>
 );
 
 const IconsPage = () => (
-  <div style={{ maxWidth: 820, fontFamily: fontFamily.sans }}>
-    <h1 style={{ fontSize: 28, fontWeight: 700, margin: '0 0 4px', color: text.primary }}>Icons</h1>
-    <p style={{ fontSize: 14, color: text.muted, margin: '0 0 8px' }}>
-      Aegis is icon-library-agnostic. Use any SVG icon set (Lucide, Heroicons, Phosphor, etc.)
-      and apply Aegis color tokens for visual consistency.
-    </p>
-    <p style={{ fontSize: 13, color: text.muted, margin: '0 0 32px' }}>
-      Below are example icons rendered at 20px with Aegis token colors.
+  <div style={{ maxWidth: 860, fontFamily: fontFamily.sans }}>
+    <h1 style={{ fontSize: 28, fontWeight: 700, margin: '0 0 6px', color: text.primary, letterSpacing: '-0.02em' }}>Icons</h1>
+    <p style={{ fontSize: 15, color: text.muted, margin: '0 0 36px', lineHeight: '24px' }}>
+      Aegis is icon-library-agnostic. Use any SVG icon set — Lucide, Heroicons, Phosphor — and apply Aegis color tokens for visual consistency across your interface.
     </p>
 
-    {/* Default color */}
-    <h2 style={{ fontSize: 18, fontWeight: 600, margin: '0 0 16px', color: text.primary }}>Default (text.primary)</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginBottom: 40 }}>
+    <SectionTitle>Default (text.primary)</SectionTitle>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))', gap: 16, marginBottom: 48 }}>
       {EXAMPLE_ICONS.map((icon) => (
         <IconCell key={icon.name} {...icon} color={text.primary} />
       ))}
     </div>
 
-    {/* Brand color */}
-    <h2 style={{ fontSize: 18, fontWeight: 600, margin: '0 0 16px', color: text.primary }}>Brand (brandPrimary.500)</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginBottom: 40 }}>
+    <SectionTitle>Brand (brandPrimary.500)</SectionTitle>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))', gap: 16, marginBottom: 48 }}>
       {EXAMPLE_ICONS.slice(0, 6).map((icon) => (
         <IconCell key={icon.name} {...icon} color={brandPrimary[500]} />
       ))}
     </div>
 
-    {/* Semantic colors */}
-    <h2 style={{ fontSize: 18, fontWeight: 600, margin: '0 0 16px', color: text.primary }}>Semantic Colors</h2>
-    <div style={{ display: 'flex', gap: 24, marginBottom: 40 }}>
+    <SectionTitle>Semantic Colors</SectionTitle>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 48 }}>
       <IconCell name="Success" path={EXAMPLE_ICONS[7].path} color={semantic.success[500]} />
       <IconCell name="Warning" path={EXAMPLE_ICONS[8].path} color={semantic.warning[500]} />
       <IconCell name="Error" path={EXAMPLE_ICONS[0].path} color={semantic.error[500]} />
       <IconCell name="Info" path={EXAMPLE_ICONS[4].path} color={semantic.info[500]} />
     </div>
 
-    {/* Sizes */}
-    <h2 style={{ fontSize: 18, fontWeight: 600, margin: '0 0 16px', color: text.primary }}>Sizing</h2>
-    <div style={{ display: 'flex', alignItems: 'end', gap: 24, marginBottom: 40 }}>
+    <SectionTitle>Sizing</SectionTitle>
+    <div style={{ display: 'flex', alignItems: 'end', gap: 32, marginBottom: 48 }}>
       {[14, 16, 20, 24, 32].map((size) => (
         <div key={size} style={{ textAlign: 'center' }}>
           <SvgIcon path={EXAMPLE_ICONS[3].path} size={size} color={text.primary} />
-          <div style={{ fontFamily: 'monospace', fontSize: 11, color: text.muted, marginTop: 6 }}>{size}px</div>
+          <div style={{ fontFamily: fontFamily.mono, fontSize: 11, color: text.muted, marginTop: 8 }}>{size}px</div>
         </div>
       ))}
     </div>
 
-    {/* Usage guidance */}
-    <h2 style={{ fontSize: 18, fontWeight: 600, margin: '0 0 12px', color: text.primary }}>Usage</h2>
+    <SectionTitle>Usage</SectionTitle>
     <div
       style={{
         background: neutral[50],
