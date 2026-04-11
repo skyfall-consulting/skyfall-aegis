@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MedicationRow } from './MedicationRow';
 
 const meta: Meta<typeof MedicationRow> = {
-  title: 'Healthcare/MedicationRow',
+  title: 'Aegis X/Healthcare/MedicationRow',
   component: MedicationRow,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 700, border: '1px solid var(--aegis-color-border-default)', borderRadius: 8, overflow: 'hidden' }}><Story /></div>],

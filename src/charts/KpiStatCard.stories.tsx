@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { KpiStatCard } from './KpiStatCard';
 
 const meta: Meta<typeof KpiStatCard> = {
-  title: 'Charts/KpiStatCard',
+  title: 'Aegis X/Charts/KpiStatCard',
   component: KpiStatCard,
   tags: ['autodocs'],
   parameters: { layout: 'padded' },

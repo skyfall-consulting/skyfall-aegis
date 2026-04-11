@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Drawer } from './Drawer';
 
 const meta: Meta<typeof Drawer> = {
-  title: 'Navigation/Drawer',
+  title: 'Components/Navigation/Drawer',
   component: Drawer,
   tags: ['autodocs'],
 };

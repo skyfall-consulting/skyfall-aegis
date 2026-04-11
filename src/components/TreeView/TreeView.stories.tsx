@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TreeView, type TreeNode } from './TreeView';
 
 const meta: Meta<typeof TreeView> = {
-  title: 'Data Display/TreeView',
+  title: 'Components/Data Display/TreeView',
   component: TreeView,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 320 }}><Story /></div>],

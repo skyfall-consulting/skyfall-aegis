@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { FileUpload } from './FileUpload';
 
 const meta: Meta<typeof FileUpload> = {
-  title: 'Inputs/FileUpload',
+  title: 'Components/Inputs/FileUpload',
   component: FileUpload,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 400 }}><Story /></div>],

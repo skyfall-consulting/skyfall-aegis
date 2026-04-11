@@ -19,7 +19,7 @@ const SettingsIcon = () => (
 );
 
 const meta: Meta<typeof SideNav> = {
-  title: 'Navigation/SideNav',
+  title: 'Components/Navigation/SideNav',
   component: SideNav,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ height: 500, display: 'flex' }}><Story /></div>],

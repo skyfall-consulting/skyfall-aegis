@@ -42,7 +42,7 @@ const BellIcon = () => (
 );
 
 const meta: Meta<typeof AppBar> = {
-  title: 'Surfaces/AppBar',
+  title: 'Components/Surfaces/AppBar',
   component: AppBar,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: '100%' }}><Story /></div>],

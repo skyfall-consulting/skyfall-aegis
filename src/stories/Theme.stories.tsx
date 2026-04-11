@@ -127,7 +127,7 @@ const ThemePage = () => (
 );
 
 const meta: Meta = {
-  title: 'Foundations/Themes',
+  title: 'Components/Foundations/Themes',
   tags: ['autodocs'],
 };
 

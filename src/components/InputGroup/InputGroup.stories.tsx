@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { InputGroup } from './InputGroup';
 
 const meta: Meta<typeof InputGroup> = {
-  title: 'Layout/InputGroup',
+  title: 'Components/Layout/InputGroup',
   component: InputGroup,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 400 }}><Story /></div>],

@@ -3,7 +3,7 @@ import { StatusBadge } from './StatusBadge';
 import type { StatusBadgeStatus } from './StatusBadge';
 
 const meta: Meta<typeof StatusBadge> = {
-  title: 'Data Display/StatusBadge',
+  title: 'Components/Data Display/StatusBadge',
   component: StatusBadge,
   tags: ['autodocs'],
 };

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Toolbar, ToolbarGroup, ToolbarDivider } from './Toolbar';
 
 const meta: Meta<typeof Toolbar> = {
-  title: 'Layout/Toolbar',
+  title: 'Components/Layout/Toolbar',
   component: Toolbar,
   tags: ['autodocs'],
 };

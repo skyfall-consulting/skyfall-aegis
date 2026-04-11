@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { LineChart } from './LineChart';
 
 const meta: Meta<typeof LineChart> = {
-  title: 'Charts/LineChart',
+  title: 'Aegis X/Charts/LineChart',
   component: LineChart,
   tags: ['autodocs'],
   parameters: { layout: 'padded' },

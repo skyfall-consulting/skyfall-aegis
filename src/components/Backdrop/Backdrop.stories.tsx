@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Backdrop } from './Backdrop';
 
 const meta: Meta<typeof Backdrop> = {
-  title: 'Feedback/Backdrop',
+  title: 'Components/Feedback/Backdrop',
   component: Backdrop,
   tags: ['autodocs'],
 };

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AppointmentCard } from './AppointmentCard';
 
 const meta: Meta<typeof AppointmentCard> = {
-  title: 'Healthcare/AppointmentCard',
+  title: 'Aegis X/Healthcare/AppointmentCard',
   component: AppointmentCard,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 480 }}><Story /></div>],

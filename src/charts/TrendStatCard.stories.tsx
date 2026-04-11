@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TrendStatCard } from './TrendStatCard';
 
 const meta: Meta<typeof TrendStatCard> = {
-  title: 'Charts/TrendStatCard',
+  title: 'Aegis X/Charts/TrendStatCard',
   component: TrendStatCard,
   tags: ['autodocs'],
   parameters: { layout: 'padded' },

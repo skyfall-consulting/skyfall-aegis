@@ -50,7 +50,7 @@ const TriggerButton = ({ children }: { children: React.ReactNode }) => (
 );
 
 const meta: Meta<typeof Menu> = {
-  title: 'Navigation/Menu',
+  title: 'Components/Navigation/Menu',
   component: Menu,
   tags: ['autodocs'],
 };

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { CommandPalette, type CommandItem } from './CommandPalette';
 
 const meta: Meta<typeof CommandPalette> = {
-  title: 'Navigation/CommandPalette',
+  title: 'Components/Navigation/CommandPalette',
   component: CommandPalette,
   tags: ['autodocs'],
 };

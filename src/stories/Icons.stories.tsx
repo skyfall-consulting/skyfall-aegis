@@ -122,7 +122,7 @@ import { brandPrimary } from '@skyfall_ai/aegis';
 );
 
 const meta: Meta = {
-  title: 'Foundations/Icons',
+  title: 'Components/Foundations/Icons',
   tags: ['autodocs'],
 };
 

@@ -1,0 +1,88 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Overview/Installation" />
+
+# Installation
+
+## Install the package
+
+```bash
+npm install @skyfall_ai/aegis
+```
+
+```bash
+pnpm add @skyfall_ai/aegis
+```
+
+Aegis requires React 18+ and Recharts 2.10+ as peer dependencies:
+
+```bash
+npm install react react-dom recharts
+```
+
+## Import styles
+
+Aegis ships a single CSS bundle that includes all component styles and design tokens. Import it once at your application root:
+
+```tsx
+// app/layout.tsx or main.tsx
+import '@skyfall_ai/aegis/dist/index.css';
+```
+
+This provides all Aegis CSS custom properties (`--aegis-*` tokens) and component styles. No additional theme provider or CSS setup is required.
+
+## Use components
+
+```tsx
+import { Button, TextField, Card, Typography } from '@skyfall_ai/aegis';
+
+function PatientSearch() {
+  return (
+    <Card>
+      <Typography variant="heading-sm">Find a patient</Typography>
+      <TextField label="Patient name or MRN" placeholder="Search..." />
+      <Button>Search</Button>
+    </Card>
+  );
+}
+```
+
+## Healthcare components
+
+Aegis X healthcare components compose from the core system and are imported from the same package:
+
+```tsx
+import { PatientCard, ClinicalBanner, MedicationRow } from '@skyfall_ai/aegis';
+```
+
+## Charts
+
+The chart system is built on Recharts. Import chart components alongside core components:
+
+```tsx
+import { ChartCard, LineChart, BarChart } from '@skyfall_ai/aegis/charts';
+```
+
+Recharts must be installed as a peer dependency.
+
+## Design tokens
+
+Aegis uses CSS custom properties for all visual decisions — colors, spacing, typography, motion, and elevation. Tokens are available globally once the CSS bundle is imported:
+
+```css
+.custom-element {
+  color: var(--aegis-color-text-primary);
+  font-family: var(--aegis-font-family-sans);
+  padding: var(--aegis-space-4);
+  border-radius: var(--aegis-radius-md);
+}
+```
+
+Browse the **Components / Foundations / Tokens** page in this Storybook for the full token reference.
+
+## Next steps
+
+- Browse **Components** in the sidebar to explore the full core system
+- Check **Aegis X / Healthcare** for domain-specific components
+- Check **Aegis X / Charts** for data visualization components
+- Review **Components / Foundations** for design tokens, typography, and icons

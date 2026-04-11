@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { CollapsiblePanel } from './CollapsiblePanel';
 
 const meta: Meta<typeof CollapsiblePanel> = {
-  title: 'Surfaces/CollapsiblePanel',
+  title: 'Components/Surfaces/CollapsiblePanel',
   component: CollapsiblePanel,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 480 }}><Story /></div>],

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { DescriptionList } from './DescriptionList';
 
 const meta: Meta<typeof DescriptionList> = {
-  title: 'Data Display/DescriptionList',
+  title: 'Components/Data Display/DescriptionList',
   component: DescriptionList,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 480 }}><Story /></div>],

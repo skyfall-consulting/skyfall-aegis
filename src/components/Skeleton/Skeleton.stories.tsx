@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Skeleton } from './Skeleton';
 
 const meta: Meta<typeof Skeleton> = {
-  title: 'Data Display/Skeleton',
+  title: 'Components/Data Display/Skeleton',
   component: Skeleton,
   tags: ['autodocs'],
 };

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ChartCard } from './ChartCard';
 
 const meta: Meta<typeof ChartCard> = {
-  title: 'Charts/ChartCard',
+  title: 'Aegis X/Charts/ChartCard',
   component: ChartCard,
   tags: ['autodocs'],
   parameters: { layout: 'padded' },

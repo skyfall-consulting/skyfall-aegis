@@ -9,7 +9,7 @@ const PillIcon = () => (
 );
 
 const meta: Meta<typeof Chip> = {
-  title: 'Data Display/Chip',
+  title: 'Components/Data Display/Chip',
   component: Chip,
   tags: ['autodocs'],
 };

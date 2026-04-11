@@ -3,7 +3,7 @@ import { BarChart } from './BarChart';
 import { StackedBarChart } from './StackedBarChart';
 
 const meta: Meta<typeof BarChart> = {
-  title: 'Charts/BarChart',
+  title: 'Aegis X/Charts/BarChart',
   component: BarChart,
   tags: ['autodocs'],
   parameters: { layout: 'padded' },

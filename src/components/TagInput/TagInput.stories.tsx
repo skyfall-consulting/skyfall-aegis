@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TagInput } from './TagInput';
 
 const meta: Meta<typeof TagInput> = {
-  title: 'Inputs/TagInput',
+  title: 'Components/Inputs/TagInput',
   component: TagInput,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 400 }}><Story /></div>],

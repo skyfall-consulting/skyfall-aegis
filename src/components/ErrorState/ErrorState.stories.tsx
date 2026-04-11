@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ErrorState } from './ErrorState';
 
 const meta: Meta<typeof ErrorState> = {
-  title: 'Feedback/ErrorState',
+  title: 'Components/Feedback/ErrorState',
   component: ErrorState,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 480 }}><Story /></div>],

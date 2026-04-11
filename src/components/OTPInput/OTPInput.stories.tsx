@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { OTPInput } from './OTPInput';
 
 const meta: Meta<typeof OTPInput> = {
-  title: 'Inputs/OTPInput',
+  title: 'Components/Inputs/OTPInput',
   component: OTPInput,
   tags: ['autodocs'],
 };

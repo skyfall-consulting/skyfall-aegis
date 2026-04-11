@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { FormField } from './FormField';
-import { Input } from '../Input';
+import { TextField } from '../TextField';
 import { Select } from '../Select';
 
 const meta: Meta<typeof FormField> = {
-  title: 'Layout/FormField',
+  title: 'Components/Layout/FormField',
   component: FormField,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 360 }}><Story /></div>],
@@ -18,7 +18,7 @@ export const Default: Story = {
     label: 'Patient Name',
     htmlFor: 'patient-name',
     helperText: 'Enter the patient\'s full legal name',
-    children: <Input id="patient-name" placeholder="John Doe" fullWidth />,
+    children: <TextField id="patient-name" placeholder="John Doe" fullWidth />,
   },
 };
 
@@ -28,7 +28,7 @@ export const Required: Story = {
     htmlFor: 'mrn',
     required: true,
     helperText: 'Unique identifier for the patient record',
-    children: <Input id="mrn" placeholder="MRN-000000" fullWidth />,
+    children: <TextField id="mrn" placeholder="MRN-000000" fullWidth />,
   },
 };
 
@@ -38,7 +38,7 @@ export const WithError: Story = {
     htmlFor: 'email',
     required: true,
     error: 'A valid email address is required for patient notifications',
-    children: <Input id="email" defaultValue="invalid@" error fullWidth />,
+    children: <TextField id="email" defaultValue="invalid@" error fullWidth />,
   },
 };
 
@@ -48,7 +48,7 @@ export const Disabled: Story = {
     htmlFor: 'insurance',
     disabled: true,
     helperText: 'Contact admin to update insurance information',
-    children: <Input id="insurance" defaultValue="Blue Cross" disabled fullWidth />,
+    children: <TextField id="insurance" defaultValue="Blue Cross" disabled fullWidth />,
   },
 };
 
@@ -77,16 +77,16 @@ export const PatientRegistrationForm: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       <FormField label="First Name" htmlFor="first" required>
-        <Input id="first" placeholder="First name" fullWidth />
+        <TextField id="first" placeholder="First name" fullWidth />
       </FormField>
       <FormField label="Last Name" htmlFor="last" required>
-        <Input id="last" placeholder="Last name" fullWidth />
+        <TextField id="last" placeholder="Last name" fullWidth />
       </FormField>
       <FormField label="Date of Birth" htmlFor="dob" required helperText="MM/DD/YYYY format">
-        <Input id="dob" placeholder="01/15/1990" fullWidth />
+        <TextField id="dob" placeholder="01/15/1990" fullWidth />
       </FormField>
       <FormField label="Phone" htmlFor="phone" helperText="Primary contact number">
-        <Input id="phone" placeholder="(555) 123-4567" fullWidth />
+        <TextField id="phone" placeholder="(555) 123-4567" fullWidth />
       </FormField>
     </div>
   ),

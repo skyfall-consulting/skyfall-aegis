@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { LabResultRow } from './LabResultRow';
 
 const meta: Meta<typeof LabResultRow> = {
-  title: 'Healthcare/LabResultRow',
+  title: 'Aegis X/Healthcare/LabResultRow',
   component: LabResultRow,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 700, border: '1px solid #e2e8f0', borderRadius: 8, overflow: 'hidden' }}><Story /></div>],

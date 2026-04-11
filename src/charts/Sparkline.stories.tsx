@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Sparkline } from './Sparkline';
 
 const meta: Meta<typeof Sparkline> = {
-  title: 'Charts/Sparkline',
+  title: 'Aegis X/Charts/Sparkline',
   component: Sparkline,
   tags: ['autodocs'],
   parameters: { layout: 'centered' },

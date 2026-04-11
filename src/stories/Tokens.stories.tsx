@@ -173,7 +173,7 @@ const TokensPage = () => (
 );
 
 const meta: Meta = {
-  title: 'Foundations/Tokens',
+  title: 'Components/Foundations/Tokens',
   tags: ['autodocs'],
 };
 

@@ -268,30 +268,3 @@ export type { LabResultRowProps, LabResultStatus } from './LabResultRow';
 export { InsuranceCard } from './InsuranceCard';
 export type { InsuranceCardProps, InsurancePlanType, InsuranceStatus } from './InsuranceCard';
 
-// ---------------------------------------------------------------------------
-// Deprecated aliases (backwards compatibility)
-// ---------------------------------------------------------------------------
-
-/** @deprecated Use `TextField` instead */
-export { Input } from './Input';
-/** @deprecated Use `TextFieldProps` instead */
-export type { InputProps } from './Input';
-
-/** @deprecated Use `Progress` instead */
-export { ProgressBar } from './ProgressBar';
-/** @deprecated Use `ProgressProps` instead */
-export type { ProgressBarProps } from './ProgressBar';
-
-/** @deprecated Use `AppBar` instead */
-export { TopNav } from './TopNav';
-/** @deprecated Use `AppBarProps` instead */
-export type { TopNavProps } from './TopNav';
-
-/** @deprecated Use `Dialog` instead */
-export { ConfirmDialog } from './ConfirmDialog';
-/** @deprecated Use `DialogProps` instead */
-export type { ConfirmDialogProps } from './ConfirmDialog';
-
-/** @deprecated Use `KpiStatCard` from charts instead */
-export { StatCard } from './StatCard';
-export type { StatCardProps } from './StatCard';

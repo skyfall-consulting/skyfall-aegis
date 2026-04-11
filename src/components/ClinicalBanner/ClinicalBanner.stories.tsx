@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ClinicalBanner } from './ClinicalBanner';
 
 const meta: Meta<typeof ClinicalBanner> = {
-  title: 'Healthcare/ClinicalBanner',
+  title: 'Aegis X/Healthcare/ClinicalBanner',
   component: ClinicalBanner,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 600 }}><Story /></div>],
