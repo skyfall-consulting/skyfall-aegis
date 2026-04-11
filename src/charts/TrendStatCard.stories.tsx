@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TrendStatCard } from './TrendStatCard';
 
 const meta: Meta<typeof TrendStatCard> = {

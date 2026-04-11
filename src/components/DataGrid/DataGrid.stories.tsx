@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { DataGrid } from './DataGrid';
 import type { DataGridColumn, SortDirection } from './DataGrid';
 import { StatusBadge } from '../StatusBadge';

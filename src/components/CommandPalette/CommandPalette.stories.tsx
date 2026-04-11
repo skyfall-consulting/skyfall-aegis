@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { CommandPalette, type CommandItem } from './CommandPalette';
 
 const meta: Meta<typeof CommandPalette> = {

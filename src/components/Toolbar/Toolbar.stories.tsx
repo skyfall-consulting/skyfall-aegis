@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Toolbar, ToolbarGroup, ToolbarDivider } from './Toolbar';
 
 const meta: Meta<typeof Toolbar> = {

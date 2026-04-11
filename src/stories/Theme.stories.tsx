@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { neutral, brandPrimary, semantic, text, surface, border } from '../tokens/colors';
 import { fontFamily } from '../tokens/typography';
 import { shadow } from '../tokens/shadows';

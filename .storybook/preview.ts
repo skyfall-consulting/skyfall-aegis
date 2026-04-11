@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
 import skyfallAegisTheme from './skyfallAegisTheme';
 import '../src/tokens/aegis-tokens.css';
 import './storybook.css';
@@ -18,13 +18,12 @@ const preview: Preview = {
       test: 'error',
     },
     backgrounds: {
-      default: 'White',
-      values: [
-        { name: 'White', value: '#FFFFFF' },
-        { name: 'Canvas', value: '#FAFBFC' },
-        { name: 'Subtle', value: '#F5F7FA' },
-        { name: 'Dark', value: '#16202B' },
-      ],
+      options: {
+        white: { name: 'White', value: '#FFFFFF' },
+        canvas: { name: 'Canvas', value: '#FAFBFC' },
+        subtle: { name: 'Subtle', value: '#F5F7FA' },
+        dark: { name: 'Dark', value: '#16202B' }
+      }
     },
     layout: 'centered',
     options: {
@@ -56,6 +55,12 @@ const preview: Preview = {
       },
     },
   },
+
+  initialGlobals: {
+    backgrounds: {
+      value: 'white'
+    }
+  }
 };
 
 export default preview;
