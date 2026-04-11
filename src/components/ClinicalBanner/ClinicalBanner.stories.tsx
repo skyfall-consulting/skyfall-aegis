@@ -54,3 +54,20 @@ export const Dismissible: Story = {
     onDismiss: () => alert('Banner dismissed'),
   },
 };
+
+export const AlertStack: Story = {
+  name: 'Alert Stack',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <ClinicalBanner severity="critical" title="Allergy Alert: Penicillin" dismissible>
+        Severe documented allergy. Anaphylaxis risk.
+      </ClinicalBanner>
+      <ClinicalBanner severity="high" title="Fall Risk">
+        Morse Fall Scale score: 55. Implement fall prevention protocol.
+      </ClinicalBanner>
+      <ClinicalBanner severity="low" title="Advance Directive on File">
+        DNR order active since 01/15/2026.
+      </ClinicalBanner>
+    </div>
+  ),
+};

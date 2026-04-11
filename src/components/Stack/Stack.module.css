@@ -1,0 +1,28 @@
+.stack {
+  display: flex;
+}
+
+.vertical { flex-direction: column; }
+.horizontal { flex-direction: row; }
+
+.wrap { flex-wrap: wrap; }
+
+/* Gap */
+.gap-xs { gap: var(--aegis-space-1); }
+.gap-sm { gap: var(--aegis-space-2); }
+.gap-md { gap: var(--aegis-space-4); }
+.gap-lg { gap: var(--aegis-space-6); }
+.gap-xl { gap: var(--aegis-space-8); }
+
+/* Align (cross axis) */
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+.align-stretch { align-items: stretch; }
+
+/* Justify (main axis) */
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }

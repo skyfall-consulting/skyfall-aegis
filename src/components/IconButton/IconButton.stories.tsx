@@ -9,7 +9,7 @@ const CloseIcon = () => (
 );
 
 const meta: Meta<typeof IconButton> = {
-  title: 'Components/IconButton',
+  title: 'Inputs/IconButton',
   component: IconButton,
   tags: ['autodocs'],
   args: { icon: <CloseIcon />, 'aria-label': 'Close' },

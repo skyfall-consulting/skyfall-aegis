@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TopNav } from './TopNav';
+import { AppBar } from './AppBar';
 
 const navLinkStyle: React.CSSProperties = {
   padding: '6px 12px',
@@ -41,15 +41,15 @@ const BellIcon = () => (
   </button>
 );
 
-const meta: Meta<typeof TopNav> = {
-  title: 'Components/TopNav',
-  component: TopNav,
+const meta: Meta<typeof AppBar> = {
+  title: 'Surfaces/AppBar',
+  component: AppBar,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: '100%' }}><Story /></div>],
 };
 
 export default meta;
-type Story = StoryObj<typeof TopNav>;
+type Story = StoryObj<typeof AppBar>;
 
 export const Default: Story = {
   args: {

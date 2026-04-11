@@ -59,11 +59,21 @@ export const WithAvatar: Story = {
     status: 'active',
     allergies: ['Codeine'],
     primaryPhysician: 'Dr. Lisa Park',
-    avatar: (
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="24" fill="#E2E8F0" />
-        <text x="24" y="28" textAnchor="middle" fontSize="18" fill="#64748B">JW</text>
-      </svg>
-    ),
+    avatarSrc: 'https://i.pravatar.cc/96?u=jameswilson',
+  },
+};
+
+export const FullDemographics: Story = {
+  name: 'Full Demographics',
+  args: {
+    name: 'Ana Garcia',
+    mrn: 'MRN-2024-009145',
+    dob: '06/12/1970',
+    age: 55,
+    gender: 'Female',
+    status: 'active',
+    allergies: ['Penicillin', 'Sulfa', 'Latex', 'Codeine'],
+    primaryPhysician: 'Dr. Michael Torres',
+    avatarSrc: 'https://i.pravatar.cc/96?u=anagarcia',
   },
 };

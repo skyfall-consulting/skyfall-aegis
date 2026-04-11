@@ -1,5 +1,10 @@
 import { type HTMLAttributes } from 'react';
 import { cn } from '../../utils/cn';
+import { Card } from '../Card/Card';
+import { Badge } from '../Badge/Badge';
+import { Typography } from '../Typography/Typography';
+import { DescriptionList, type DescriptionListItem } from '../DescriptionList/DescriptionList';
+import { Divider } from '../Divider/Divider';
 import styles from './InsuranceCard.module.css';
 
 export type InsurancePlanType = 'PPO' | 'HMO' | 'EPO' | 'POS' | 'Medicare' | 'Medicaid' | 'Other';
@@ -22,19 +27,21 @@ export interface InsuranceCardProps extends HTMLAttributes<HTMLDivElement> {
   expirationDate?: string;
 }
 
-const statusLabels: Record<InsuranceStatus, string> = {
-  active: 'Active',
-  inactive: 'Inactive',
-  pending: 'Pending',
+const statusBadgeMap: Record<InsuranceStatus, { status: 'success' | 'neutral' | 'warning'; label: string }> = {
+  active: { status: 'success', label: 'Active' },
+  inactive: { status: 'neutral', label: 'Inactive' },
+  pending: { status: 'warning', label: 'Pending' },
 };
 
 /**
  * InsuranceCard — displays insurance plan summary information.
  *
+ * Composes: Card, Badge, Typography, DescriptionList, Divider
+ *
  * Accessibility:
  * - Uses role="region" with aria-label for screen reader context
  * - Status communicated via text label, not color alone
- * - Structured layout for easy scanning
+ * - DescriptionList provides semantic label-value pairs
  */
 export function InsuranceCard({
   planName,
@@ -47,8 +54,19 @@ export function InsuranceCard({
   className,
   ...props
 }: InsuranceCardProps) {
+  const badgeConfig = statusBadgeMap[status];
+
+  const items: DescriptionListItem[] = [
+    { label: 'Member ID', value: memberId },
+    { label: 'Group #', value: groupNumber },
+    { label: 'Effective', value: effectiveDate },
+    ...(expirationDate ? [{ label: 'Expires', value: expirationDate }] : []),
+  ];
+
   return (
-    <div
+    <Card
+      elevation="raised"
+      padding="lg"
       className={cn(styles.card, className)}
       role="region"
       aria-label={`Insurance: ${planName}`}
@@ -56,34 +74,17 @@ export function InsuranceCard({
     >
       <div className={styles.header}>
         <div className={styles.planInfo}>
-          <h3 className={styles.planName}>{planName}</h3>
-          <span className={styles.planType}>{planType}</span>
+          <Typography variant="heading-sm" as="h3">{planName}</Typography>
+          <Typography variant="caption" color="muted" weight="medium" as="span">
+            {planType}
+          </Typography>
         </div>
-        <span className={cn(styles.statusBadge, styles[`status-${status}`])}>
-          {statusLabels[status]}
-        </span>
+        <Badge status={badgeConfig.status}>{badgeConfig.label}</Badge>
       </div>
 
-      <div className={styles.details}>
-        <div className={styles.field}>
-          <span className={styles.label}>Member ID</span>
-          <span className={styles.value}>{memberId}</span>
-        </div>
-        <div className={styles.field}>
-          <span className={styles.label}>Group #</span>
-          <span className={styles.value}>{groupNumber}</span>
-        </div>
-        <div className={styles.field}>
-          <span className={styles.label}>Effective</span>
-          <span className={styles.value}>{effectiveDate}</span>
-        </div>
-        {expirationDate && (
-          <div className={styles.field}>
-            <span className={styles.label}>Expires</span>
-            <span className={styles.value}>{expirationDate}</span>
-          </div>
-        )}
-      </div>
-    </div>
+      <Divider spacing="sm" />
+
+      <DescriptionList items={items} layout="grid" columns={2} />
+    </Card>
   );
 }

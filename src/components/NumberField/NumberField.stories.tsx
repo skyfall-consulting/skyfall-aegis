@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { NumberField } from './NumberField';
 
 const meta: Meta<typeof NumberField> = {
-  title: 'Forms/NumberField',
+  title: 'Inputs/NumberField',
   component: NumberField,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 200 }}><Story /></div>],

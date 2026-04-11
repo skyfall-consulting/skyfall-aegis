@@ -1,5 +1,11 @@
 import { type HTMLAttributes, type ReactNode } from 'react';
 import { cn } from '../../utils/cn';
+import { Card } from '../Card/Card';
+import { Avatar } from '../Avatar/Avatar';
+import { Badge } from '../Badge/Badge';
+import { Typography } from '../Typography/Typography';
+import { Chip } from '../Chip/Chip';
+import { Divider } from '../Divider/Divider';
 import styles from './PatientCard.module.css';
 
 export type PatientStatus = 'active' | 'inactive' | 'critical';
@@ -15,7 +21,12 @@ export interface PatientCardProps extends HTMLAttributes<HTMLDivElement> {
   age: number;
   /** Patient gender */
   gender: string;
-  /** Avatar element */
+  /** Avatar image URL (preferred) */
+  avatarSrc?: string;
+  /**
+   * @deprecated Use `avatarSrc` instead. Accepts a custom ReactNode for the avatar slot.
+   * When both `avatar` and `avatarSrc` are provided, `avatarSrc` takes precedence.
+   */
   avatar?: ReactNode;
   /** Patient status */
   status?: PatientStatus;
@@ -25,19 +36,21 @@ export interface PatientCardProps extends HTMLAttributes<HTMLDivElement> {
   primaryPhysician?: string;
 }
 
-const statusLabels: Record<PatientStatus, string> = {
-  active: 'Active',
-  inactive: 'Inactive',
-  critical: 'Critical',
+const statusBadgeMap: Record<PatientStatus, { status: 'success' | 'neutral' | 'error'; label: string }> = {
+  active: { status: 'success', label: 'Active' },
+  inactive: { status: 'neutral', label: 'Inactive' },
+  critical: { status: 'error', label: 'Critical' },
 };
 
 /**
  * PatientCard — summary card displaying patient demographics and key info.
  *
+ * Composes: Card, Avatar, Badge, Typography, Chip, Divider
+ *
  * Accessibility:
  * - Uses role="region" with aria-label for screen readers
  * - Status communicated via text, not color alone
- * - Allergy list uses semantic <ul> element
+ * - Allergy list uses Chip components with semantic markup
  */
 export function PatientCard({
   name,
@@ -45,6 +58,7 @@ export function PatientCard({
   dob,
   age,
   gender,
+  avatarSrc,
   avatar,
   status = 'active',
   allergies = [],
@@ -52,55 +66,70 @@ export function PatientCard({
   className,
   ...props
 }: PatientCardProps) {
+  const badgeConfig = statusBadgeMap[status];
+
+  // Render avatar: prefer avatarSrc (Avatar component), fall back to legacy avatar ReactNode
+  const avatarElement = avatarSrc
+    ? <Avatar name={name} src={avatarSrc} size="lg" />
+    : avatar
+      ? <div className={styles.legacyAvatar} aria-hidden="true">{avatar}</div>
+      : <Avatar name={name} size="lg" />;
+
   return (
-    <div
-      className={cn(styles.card, styles[status], className)}
+    <Card
+      elevation="raised"
+      padding="lg"
+      className={cn(status === 'critical' && styles.critical, className)}
       role="region"
       aria-label={`Patient card for ${name}`}
       {...props}
     >
       <div className={styles.header}>
-        {avatar && <div className={styles.avatar} aria-hidden="true">{avatar}</div>}
+        {avatarElement}
         <div className={styles.identity}>
-          <h3 className={styles.name}>{name}</h3>
-          <span className={styles.mrn}>MRN: {mrn}</span>
+          <Typography variant="heading-sm" as="h3">{name}</Typography>
+          <Typography variant="caption" color="muted">MRN: {mrn}</Typography>
         </div>
-        <span className={cn(styles.statusBadge, styles[`status-${status}`])}>
-          {statusLabels[status]}
-        </span>
+        <Badge status={badgeConfig.status}>{badgeConfig.label}</Badge>
       </div>
+
+      <Divider spacing="sm" />
 
       <div className={styles.details}>
         <div className={styles.field}>
-          <span className={styles.label}>DOB</span>
-          <span className={styles.value}>{dob}</span>
+          <Typography variant="caption" color="muted" weight="medium" as="span">DOB</Typography>
+          <Typography variant="body-sm" as="span">{dob}</Typography>
         </div>
         <div className={styles.field}>
-          <span className={styles.label}>Age</span>
-          <span className={styles.value}>{age}</span>
+          <Typography variant="caption" color="muted" weight="medium" as="span">Age</Typography>
+          <Typography variant="body-sm" as="span">{age}</Typography>
         </div>
         <div className={styles.field}>
-          <span className={styles.label}>Gender</span>
-          <span className={styles.value}>{gender}</span>
+          <Typography variant="caption" color="muted" weight="medium" as="span">Gender</Typography>
+          <Typography variant="body-sm" as="span">{gender}</Typography>
         </div>
         {primaryPhysician && (
           <div className={styles.field}>
-            <span className={styles.label}>PCP</span>
-            <span className={styles.value}>{primaryPhysician}</span>
+            <Typography variant="caption" color="muted" weight="medium" as="span">PCP</Typography>
+            <Typography variant="body-sm" as="span">{primaryPhysician}</Typography>
           </div>
         )}
       </div>
 
       {allergies.length > 0 && (
         <div className={styles.allergies}>
-          <span className={styles.allergiesLabel}>Allergies:</span>
-          <ul className={styles.allergyList}>
+          <Typography variant="label-md" color="error" weight="semibold" as="span">
+            Allergies:
+          </Typography>
+          <div className={styles.allergyList} role="list" aria-label="Patient allergies">
             {allergies.map((allergy) => (
-              <li key={allergy} className={styles.allergyItem}>{allergy}</li>
+              <Chip key={allergy} color="error" size="sm" variant="filled">
+                {allergy}
+              </Chip>
             ))}
-          </ul>
+          </div>
         </div>
       )}
-    </div>
+    </Card>
   );
 }

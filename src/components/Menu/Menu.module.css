@@ -1,0 +1,133 @@
+.menuContainer {
+  position: relative;
+  display: inline-flex;
+}
+
+.trigger {
+  display: inline-flex;
+}
+
+/* ---------- Menu surface ---------- */
+
+.menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  z-index: var(--aegis-z-dropdown, 1100);
+  min-width: 180px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: var(--aegis-space-1) 0;
+  background-color: var(--aegis-color-surface-default);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  border-radius: var(--aegis-radius-md);
+  box-shadow: var(--aegis-shadow-lg);
+  font-family: var(--aegis-font-family-sans);
+  animation: aegis-menu-in var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard) both;
+}
+
+.align-start {
+  left: 0;
+}
+
+.align-end {
+  right: 0;
+}
+
+/* ---------- MenuItem ---------- */
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-2);
+  padding: var(--aegis-space-2) var(--aegis-space-4);
+  font-size: var(--aegis-font-size-body-sm);
+  line-height: var(--aegis-line-height-body-sm);
+  color: var(--aegis-color-text-primary);
+  cursor: pointer;
+  transition: background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+  outline: none;
+}
+
+.menuItem:hover,
+.menuItem:focus-visible {
+  background-color: var(--aegis-color-surface-hover, var(--aegis-color-neutral-50));
+}
+
+.menuItem:focus-visible {
+  box-shadow: inset 2px 0 0 0 var(--aegis-color-brand-primary-500);
+}
+
+/* Danger */
+.menuItem.danger {
+  color: var(--aegis-color-error-700);
+}
+
+.menuItem.danger:hover,
+.menuItem.danger:focus-visible {
+  background-color: var(--aegis-color-error-50);
+}
+
+/* Disabled */
+.menuItem.itemDisabled {
+  opacity: var(--aegis-opacity-disabled);
+  cursor: not-allowed;
+}
+
+.menuItem.itemDisabled:hover {
+  background-color: transparent;
+}
+
+/* Sub-elements */
+.itemIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--aegis-color-text-muted);
+}
+
+.menuItem.danger .itemIcon {
+  color: var(--aegis-color-error-500);
+}
+
+.itemLabel {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTrailing {
+  flex-shrink: 0;
+  font-size: var(--aegis-font-size-caption);
+  color: var(--aegis-color-text-muted);
+}
+
+/* ---------- Divider ---------- */
+
+.divider {
+  height: 1px;
+  margin: var(--aegis-space-1) 0;
+  background-color: var(--aegis-color-border-default);
+}
+
+/* ---------- Group label ---------- */
+
+.groupLabel {
+  padding: var(--aegis-space-2) var(--aegis-space-4) var(--aegis-space-1);
+  font-size: var(--aegis-font-size-caption);
+  font-weight: var(--aegis-font-weight-semibold);
+  color: var(--aegis-color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes aegis-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

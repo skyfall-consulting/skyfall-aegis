@@ -1,5 +1,7 @@
 import { type HTMLAttributes } from 'react';
 import { cn } from '../../utils/cn';
+import { Badge } from '../Badge/Badge';
+import { Typography } from '../Typography/Typography';
 import styles from './LabResultRow.module.css';
 
 export type LabResultStatus = 'normal' | 'abnormal-high' | 'abnormal-low' | 'critical';
@@ -19,11 +21,11 @@ export interface LabResultRowProps extends HTMLAttributes<HTMLDivElement> {
   collectedDate: string;
 }
 
-const statusLabels: Record<LabResultStatus, string> = {
-  normal: 'Normal',
-  'abnormal-high': 'High',
-  'abnormal-low': 'Low',
-  critical: 'Critical',
+const statusBadgeMap: Record<LabResultStatus, { status: 'success' | 'warning' | 'info' | 'error'; label: string }> = {
+  normal: { status: 'success', label: 'Normal' },
+  'abnormal-high': { status: 'warning', label: 'High' },
+  'abnormal-low': { status: 'info', label: 'Low' },
+  critical: { status: 'error', label: 'Critical' },
 };
 
 const statusArrow: Record<LabResultStatus, string> = {
@@ -35,6 +37,8 @@ const statusArrow: Record<LabResultStatus, string> = {
 
 /**
  * LabResultRow — displays a single lab test result with visual status indicator.
+ *
+ * Composes: Badge, Typography
  *
  * Accessibility:
  * - Status conveyed via text label ("High", "Low", "Critical"), not color alone
@@ -52,6 +56,8 @@ export function LabResultRow({
   ...props
 }: LabResultRowProps) {
   const isAbnormal = status !== 'normal';
+  const badgeConfig = statusBadgeMap[status];
+  const arrow = statusArrow[status];
 
   return (
     <div
@@ -59,26 +65,29 @@ export function LabResultRow({
       {...props}
     >
       <div className={styles.testInfo}>
-        <span className={styles.testName}>{testName}</span>
+        <Typography variant="body-sm" weight="medium" as="span">{testName}</Typography>
       </div>
       <div className={styles.result}>
-        <span className={cn(styles.value, isAbnormal && styles.abnormalValue)}>
+        <Typography
+          variant="body-md"
+          weight={isAbnormal ? 'bold' : 'semibold'}
+          as="span"
+          className={cn(styles.value, isAbnormal && styles[`value-${status}`])}
+        >
           {value}
-          {statusArrow[status] && (
-            <span className={styles.arrow} aria-hidden="true"> {statusArrow[status]}</span>
+          {arrow && (
+            <span className={styles.arrow} aria-hidden="true"> {arrow}</span>
           )}
-        </span>
-        <span className={styles.unit}>{unit}</span>
+        </Typography>
+        <Typography variant="caption" color="muted" as="span">{unit}</Typography>
       </div>
       <div className={styles.range}>
-        <span className={styles.rangeLabel}>Ref:</span>
-        <span className={styles.rangeValue}>{referenceRange}</span>
+        <Typography variant="caption" color="muted" weight="medium" as="span">Ref:</Typography>
+        <Typography variant="caption" color="secondary" as="span">{referenceRange}</Typography>
       </div>
       <div className={styles.meta}>
-        <span className={cn(styles.statusBadge, styles[`badge-${status}`])}>
-          {statusLabels[status]}
-        </span>
-        <span className={styles.date}>{collectedDate}</span>
+        <Badge status={badgeConfig.status}>{badgeConfig.label}</Badge>
+        <Typography variant="caption" color="muted" as="span">{collectedDate}</Typography>
       </div>
     </div>
   );

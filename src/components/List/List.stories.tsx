@@ -21,7 +21,7 @@ const StatusDot = ({ color }: { color: string }) => (
 );
 
 const meta: Meta<typeof List> = {
-  title: 'Components/List',
+  title: 'Data Display/List',
   component: List,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 420 }}><Story /></div>],

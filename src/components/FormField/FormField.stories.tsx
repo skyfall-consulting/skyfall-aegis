@@ -4,7 +4,7 @@ import { Input } from '../Input';
 import { Select } from '../Select';
 
 const meta: Meta<typeof FormField> = {
-  title: 'Forms/FormField',
+  title: 'Layout/FormField',
   component: FormField,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 360 }}><Story /></div>],

@@ -1,0 +1,155 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--aegis-space-1);
+  border-radius: var(--aegis-radius-full);
+  font-family: var(--aegis-font-family-sans);
+  font-weight: var(--aegis-font-weight-medium);
+  white-space: nowrap;
+  vertical-align: middle;
+  transition:
+    background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+/* Sizes */
+.sm {
+  height: 24px;
+  padding: 0 var(--aegis-space-2);
+  font-size: var(--aegis-font-size-caption);
+}
+
+.md {
+  height: 30px;
+  padding: 0 var(--aegis-space-3);
+  font-size: var(--aegis-font-size-body-sm);
+}
+
+/* ---------- Filled ---------- */
+
+.filled.neutral {
+  background-color: var(--aegis-color-neutral-100);
+  color: var(--aegis-color-text-primary);
+}
+
+.filled.primary {
+  background-color: var(--aegis-color-brand-primary-50);
+  color: var(--aegis-color-brand-primary-700);
+}
+
+.filled.success {
+  background-color: var(--aegis-color-success-50);
+  color: var(--aegis-color-success-700);
+}
+
+.filled.warning {
+  background-color: var(--aegis-color-warning-50);
+  color: var(--aegis-color-warning-700);
+}
+
+.filled.error {
+  background-color: var(--aegis-color-error-50);
+  color: var(--aegis-color-error-700);
+}
+
+.filled.info {
+  background-color: var(--aegis-color-info-50);
+  color: var(--aegis-color-info-700);
+}
+
+/* ---------- Outlined ---------- */
+
+.outlined {
+  background-color: transparent;
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default);
+}
+
+.outlined.neutral {
+  border-color: var(--aegis-color-border-default);
+  color: var(--aegis-color-text-primary);
+}
+
+.outlined.primary {
+  border-color: var(--aegis-color-brand-primary-200);
+  color: var(--aegis-color-brand-primary-700);
+}
+
+.outlined.success {
+  border-color: var(--aegis-color-success-500);
+  color: var(--aegis-color-success-700);
+}
+
+.outlined.warning {
+  border-color: var(--aegis-color-warning-500);
+  color: var(--aegis-color-warning-700);
+}
+
+.outlined.error {
+  border-color: var(--aegis-color-error-500);
+  color: var(--aegis-color-error-700);
+}
+
+.outlined.info {
+  border-color: var(--aegis-color-info-500);
+  color: var(--aegis-color-info-700);
+}
+
+/* ---------- Interactive ---------- */
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  filter: brightness(0.96);
+}
+
+.clickable:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: var(--aegis-focus-ring-offset);
+  box-shadow: var(--aegis-shadow-focus);
+}
+
+/* ---------- Disabled ---------- */
+
+.disabled {
+  opacity: var(--aegis-opacity-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---------- Sub-elements ---------- */
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 calc(-1 * var(--aegis-space-1)) 0 0;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: var(--aegis-radius-full);
+  opacity: 0.64;
+  transition: opacity var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.deleteButton:hover {
+  opacity: 1;
+}
+
+.deleteButton:disabled {
+  cursor: not-allowed;
+}

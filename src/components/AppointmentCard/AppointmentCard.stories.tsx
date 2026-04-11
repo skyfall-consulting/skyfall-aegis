@@ -82,3 +82,47 @@ export const NoShow: Story = {
     location: 'Room 112',
   },
 };
+
+export const DailySchedule: Story = {
+  name: 'Daily Schedule',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <AppointmentCard
+        patientName="Maria Santos"
+        date="03/25/2026"
+        time="9:00 AM"
+        type="Follow-up"
+        provider="Dr. James Chen"
+        status="completed"
+        location="Room 204"
+      />
+      <AppointmentCard
+        patientName="Robert Johnson"
+        date="03/25/2026"
+        time="10:30 AM"
+        type="Annual Physical"
+        provider="Dr. James Chen"
+        status="in-progress"
+        location="Exam Room 3"
+      />
+      <AppointmentCard
+        patientName="Emily Nguyen"
+        date="03/25/2026"
+        time="1:00 PM"
+        type="Lab Review"
+        provider="Dr. James Chen"
+        status="checked-in"
+        location="Room 105"
+      />
+      <AppointmentCard
+        patientName="David Lee"
+        date="03/25/2026"
+        time="2:30 PM"
+        type="New Patient"
+        provider="Dr. James Chen"
+        status="scheduled"
+        location="Room 204"
+      />
+    </div>
+  ),
+};

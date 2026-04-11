@@ -1,0 +1,88 @@
+.picker {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--aegis-space-3);
+  font-family: var(--aegis-font-family-sans);
+}
+
+.disabled {
+  opacity: var(--aegis-opacity-disabled);
+  pointer-events: none;
+}
+
+.label {
+  font-size: var(--aegis-font-size-body-sm);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-primary);
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-2);
+  position: relative;
+}
+
+.swatch {
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: box-shadow var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.sm .swatch { width: 24px; height: 24px; border-radius: var(--aegis-radius-sm); }
+.md .swatch { width: 32px; height: 32px; border-radius: var(--aegis-radius-md); }
+
+.swatch:hover {
+  box-shadow: var(--aegis-shadow-sm);
+}
+
+.swatch:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: 2px;
+}
+
+.hex {
+  font-size: var(--aegis-font-size-body-sm);
+  font-family: var(--aegis-font-family-mono, monospace);
+  color: var(--aegis-color-text-secondary);
+  min-width: 68px;
+}
+
+.nativeInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.swatchGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--aegis-space-1);
+}
+
+.swatchOption {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--aegis-radius-sm);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  cursor: pointer;
+  transition:
+    transform var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard),
+    box-shadow var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.swatchOption:hover {
+  transform: scale(1.15);
+}
+
+.swatchOption:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: 2px;
+}
+
+.swatchOption.selected {
+  box-shadow: 0 0 0 2px var(--aegis-color-surface-default), 0 0 0 4px var(--aegis-color-brand-primary-500);
+}

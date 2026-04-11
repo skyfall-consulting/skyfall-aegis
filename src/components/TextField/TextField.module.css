@@ -1,4 +1,4 @@
-.input {
+.textField {
   display: block;
   width: auto;
   border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
@@ -13,23 +13,23 @@
     background-color var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
 }
 
-.input::placeholder {
+.textField::placeholder {
   color: var(--aegis-color-text-muted);
 }
 
-.input:hover:not(:disabled):not(:focus) {
+.textField:hover:not(:disabled):not(:focus) {
   border-color: var(--aegis-color-border-strong);
   background-color: var(--aegis-color-surface-hover);
 }
 
-.input:focus {
+.textField:focus {
   outline: none;
   border-color: var(--aegis-color-brand-primary-500);
   box-shadow: var(--aegis-shadow-focus);
   background-color: var(--aegis-color-surface-default);
 }
 
-.input:disabled {
+.textField:disabled {
   cursor: not-allowed;
   opacity: var(--aegis-opacity-disabled);
   background-color: var(--aegis-color-surface-subtle);

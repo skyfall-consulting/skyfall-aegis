@@ -5,7 +5,7 @@ const meta: Meta<typeof MedicationRow> = {
   title: 'Healthcare/MedicationRow',
   component: MedicationRow,
   tags: ['autodocs'],
-  decorators: [(Story) => <div style={{ maxWidth: 700, border: '1px solid #e2e8f0', borderRadius: 8, overflow: 'hidden' }}><Story /></div>],
+  decorators: [(Story) => <div style={{ maxWidth: 700, border: '1px solid var(--aegis-color-border-default)', borderRadius: 8, overflow: 'hidden' }}><Story /></div>],
 };
 
 export default meta;
@@ -61,6 +61,7 @@ export const PRN: Story = {
 };
 
 export const MedicationList: Story = {
+  name: 'Medication List',
   render: () => (
     <div>
       <MedicationRow
@@ -89,6 +90,15 @@ export const MedicationList: Story = {
         prescribedBy="Dr. Lisa Park"
         startDate="03/10/2026"
         status="prn"
+      />
+      <MedicationRow
+        name="Metformin"
+        dosage="850mg"
+        frequency="Twice daily"
+        route="Oral"
+        prescribedBy="Dr. Michael Torres"
+        startDate="12/01/2025"
+        status="hold"
       />
       <MedicationRow
         name="Amoxicillin"

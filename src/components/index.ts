@@ -1,107 +1,53 @@
+// ---------------------------------------------------------------------------
+// Inputs
+// ---------------------------------------------------------------------------
+export { TextField } from './TextField';
+export type { TextFieldProps } from './TextField';
+
 export { Button } from './Button';
 export type { ButtonProps } from './Button';
 
 export { IconButton } from './IconButton';
 export type { IconButtonProps } from './IconButton';
 
-export { Input } from './Input';
-export type { InputProps } from './Input';
-
-export { Textarea } from './Textarea';
-export type { TextareaProps } from './Textarea';
-
-export { Select } from './Select';
-export type { SelectProps } from './Select';
+export { ButtonGroup } from './ButtonGroup';
+export type { ButtonGroupProps } from './ButtonGroup';
 
 export { Checkbox } from './Checkbox';
 export type { CheckboxProps } from './Checkbox';
 
-export { Radio } from './Radio';
-export type { RadioProps } from './Radio';
-
-export { Switch } from './Switch';
-export type { SwitchProps } from './Switch';
-
-export { Label } from './Label';
-export type { LabelProps } from './Label';
-
-export { HelperText } from './HelperText';
-export type { HelperTextProps } from './HelperText';
-
-export { Card } from './Card';
-export type { CardProps } from './Card';
-
-export { Badge } from './Badge';
-export type { BadgeProps } from './Badge';
-
-export { Alert } from './Alert';
-export type { AlertProps } from './Alert';
-
-export { Tabs } from './Tabs';
-export type { TabsProps, Tab } from './Tabs';
-
-export { Modal } from './Modal';
-export type { ModalProps } from './Modal';
-
-export { Table, TableHead, TableBody, TableRow, TableHeaderCell, TableCell } from './Table';
-export type { TableProps } from './Table';
-
-export { Tooltip } from './Tooltip';
-export type { TooltipProps } from './Tooltip';
-
-export { Divider } from './Divider';
-export type { DividerProps } from './Divider';
-
-export { Spinner } from './Spinner';
-export type { SpinnerProps } from './Spinner';
-
-export { Skeleton } from './Skeleton';
-export type { SkeletonProps } from './Skeleton';
-
-export { StatusBadge } from './StatusBadge';
-export type { StatusBadgeProps, StatusBadgeStatus } from './StatusBadge';
-
-export { Avatar } from './Avatar';
-export type { AvatarProps } from './Avatar';
-
-export { EmptyState } from './EmptyState';
-export type { EmptyStateProps } from './EmptyState';
-
-export { ProgressBar } from './ProgressBar';
-export type { ProgressBarProps } from './ProgressBar';
-
-export { Pagination } from './Pagination';
-export type { PaginationProps } from './Pagination';
-
-export { DescriptionList } from './DescriptionList';
-export type { DescriptionListProps, DescriptionListItem } from './DescriptionList';
-
-export { Popover } from './Popover';
-export type { PopoverProps } from './Popover';
-
-export { Drawer } from './Drawer';
-export type { DrawerProps } from './Drawer';
-
-export { DataGrid } from './DataGrid';
-export type { DataGridProps, DataGridColumn, SortDirection } from './DataGrid';
-
-export { FormField } from './FormField';
-export type { FormFieldProps } from './FormField';
-
-export { SearchField } from './SearchField';
-export type { SearchFieldProps } from './SearchField';
-
-export { NumberField } from './NumberField';
-export type { NumberFieldProps } from './NumberField';
-
 export { CheckboxGroup } from './CheckboxGroup';
 export type { CheckboxGroupProps, CheckboxGroupOption } from './CheckboxGroup';
+
+export { Radio } from './Radio';
+export type { RadioProps } from './Radio';
 
 export { RadioGroup } from './RadioGroup';
 export type { RadioGroupProps, RadioGroupOption } from './RadioGroup';
 
+export { Select } from './Select';
+export type { SelectProps } from './Select';
+
+export { Switch } from './Switch';
+export type { SwitchProps } from './Switch';
+
+export { Textarea } from './Textarea';
+export type { TextareaProps } from './Textarea';
+
 export { Slider } from './Slider';
 export type { SliderProps } from './Slider';
+
+export { NumberField } from './NumberField';
+export type { NumberFieldProps } from './NumberField';
+
+export { SearchField } from './SearchField';
+export type { SearchFieldProps } from './SearchField';
+
+export { Autocomplete } from './Autocomplete';
+export type { AutocompleteProps, AutocompleteOption } from './Autocomplete';
+
+export { MultiSelect } from './MultiSelect';
+export type { MultiSelectProps, MultiSelectOption } from './MultiSelect';
 
 export { FileUpload } from './FileUpload';
 export type { FileUploadProps } from './FileUpload';
@@ -109,47 +55,206 @@ export type { FileUploadProps } from './FileUpload';
 export { OTPInput } from './OTPInput';
 export type { OTPInputProps } from './OTPInput';
 
-export { DatePicker } from './DatePicker';
-export type { DatePickerProps } from './DatePicker';
+export { ColorPicker } from './ColorPicker';
+export type { ColorPickerProps } from './ColorPicker';
 
-export { MultiSelect } from './MultiSelect';
-export type { MultiSelectProps, MultiSelectOption } from './MultiSelect';
+export { Rating } from './Rating';
+export type { RatingProps } from './Rating';
 
-export { Autocomplete } from './Autocomplete';
-export type { AutocompleteProps, AutocompleteOption } from './Autocomplete';
+export { TagInput } from './TagInput';
+export type { TagInputProps } from './TagInput';
 
-export { Stepper } from './Stepper';
-export type { StepperProps, StepperStep } from './Stepper';
+// ---------------------------------------------------------------------------
+// Data Display
+// ---------------------------------------------------------------------------
+export { Avatar } from './Avatar';
+export type { AvatarProps } from './Avatar';
 
-export { Accordion } from './Accordion';
-export type { AccordionProps, AccordionItem } from './Accordion';
+export { Badge } from './Badge';
+export type { BadgeProps } from './Badge';
 
-export { Breadcrumbs } from './Breadcrumbs';
-export type { BreadcrumbsProps, BreadcrumbItem } from './Breadcrumbs';
+export { Chip } from './Chip';
+export type { ChipProps } from './Chip';
 
-export { SideNav } from './SideNav';
-export type { SideNavProps, SideNavItem } from './SideNav';
-
-export { TopNav } from './TopNav';
-export type { TopNavProps } from './TopNav';
-
-export { StatCard } from './StatCard';
-export type { StatCardProps } from './StatCard';
+export { Divider } from './Divider';
+export type { DividerProps } from './Divider';
 
 export { List, ListItem } from './List';
 export type { ListProps, ListItemProps } from './List';
 
+export { Table, TableHead, TableBody, TableRow, TableHeaderCell, TableCell } from './Table';
+export type { TableProps } from './Table';
+
+export { Tooltip } from './Tooltip';
+export type { TooltipProps } from './Tooltip';
+
+export { Progress } from './Progress';
+export type { ProgressProps } from './Progress';
+
+export { Skeleton } from './Skeleton';
+export type { SkeletonProps } from './Skeleton';
+
+export { Spinner } from './Spinner';
+export type { SpinnerProps } from './Spinner';
+
+export { StatusBadge } from './StatusBadge';
+export type { StatusBadgeProps, StatusBadgeStatus } from './StatusBadge';
+
+export { Timeline } from './Timeline';
+export type { TimelineProps, TimelineItem, TimelineItemVariant } from './Timeline';
+
+export { DescriptionList } from './DescriptionList';
+export type { DescriptionListProps, DescriptionListItem } from './DescriptionList';
+
+export { Kbd } from './Kbd';
+export type { KbdProps } from './Kbd';
+
+export { TreeView } from './TreeView';
+export type { TreeViewProps, TreeNode } from './TreeView';
+
+// ---------------------------------------------------------------------------
+// Foundations
+// ---------------------------------------------------------------------------
+export { Typography } from './Typography';
+export type {
+  TypographyProps,
+  TypographyVariant,
+  TypographyColor,
+  TypographyWeight,
+  TypographyAlign,
+} from './Typography';
+
+// ---------------------------------------------------------------------------
+// Feedback
+// ---------------------------------------------------------------------------
+export { Alert } from './Alert';
+export type { AlertProps } from './Alert';
+
+export { Backdrop } from './Backdrop';
+export type { BackdropProps } from './Backdrop';
+
+export { Dialog } from './Dialog';
+export type { DialogProps } from './Dialog';
+
+export { EmptyState } from './EmptyState';
+export type { EmptyStateProps } from './EmptyState';
+
+export { ErrorState } from './ErrorState';
+export type { ErrorStateProps } from './ErrorState';
+
+export { Toast } from './Toast';
+export type { ToastProps, ToastStatus } from './Toast';
+
+export { Banner } from './Banner';
+export type { BannerProps, BannerStatus } from './Banner';
+
+// ---------------------------------------------------------------------------
+// Surfaces
+// ---------------------------------------------------------------------------
+export { Accordion } from './Accordion';
+export type { AccordionProps, AccordionItem } from './Accordion';
+
+export { AppBar } from './AppBar';
+export type { AppBarProps } from './AppBar';
+
+export { Card } from './Card';
+export type { CardProps } from './Card';
+
+export { Modal } from './Modal';
+export type { ModalProps } from './Modal';
+
+export { Paper } from './Paper';
+export type { PaperProps } from './Paper';
+
+export { Popover } from './Popover';
+export type { PopoverProps } from './Popover';
+
 export { CollapsiblePanel } from './CollapsiblePanel';
 export type { CollapsiblePanelProps } from './CollapsiblePanel';
 
+// ---------------------------------------------------------------------------
+// Navigation
+// ---------------------------------------------------------------------------
+export { Breadcrumbs } from './Breadcrumbs';
+export type { BreadcrumbsProps, BreadcrumbItem } from './Breadcrumbs';
+
+export { Drawer } from './Drawer';
+export type { DrawerProps } from './Drawer';
+
+export { Link } from './Link';
+export type { LinkProps } from './Link';
+
+export { Menu, MenuItem, MenuDivider, MenuGroup } from './Menu';
+export type { MenuProps, MenuItemProps, MenuGroupProps } from './Menu';
+
+export { Pagination } from './Pagination';
+export type { PaginationProps } from './Pagination';
+
+export { SideNav } from './SideNav';
+export type { SideNavProps, SideNavItem } from './SideNav';
+
+export { Stepper } from './Stepper';
+export type { StepperProps, StepperStep } from './Stepper';
+
+export { Tabs } from './Tabs';
+export type { TabsProps, Tab } from './Tabs';
+
+export { CommandPalette } from './CommandPalette';
+export type { CommandPaletteProps, CommandItem } from './CommandPalette';
+
+// ---------------------------------------------------------------------------
+// Layout
+// ---------------------------------------------------------------------------
+export { FormField } from './FormField';
+export type { FormFieldProps } from './FormField';
+
+export { Container } from './Container';
+export type { ContainerProps } from './Container';
+
+export { Grid } from './Grid';
+export type { GridProps } from './Grid';
+
+export { Stack } from './Stack';
+export type { StackProps } from './Stack';
+
+export { InputGroup } from './InputGroup';
+export type { InputGroupProps } from './InputGroup';
+
+export { Toolbar, ToolbarGroup, ToolbarDivider } from './Toolbar';
+export type { ToolbarProps, ToolbarGroupProps, ToolbarDividerProps } from './Toolbar';
+
+// ---------------------------------------------------------------------------
+// Utils
+// ---------------------------------------------------------------------------
+export { Label } from './Label';
+export type { LabelProps } from './Label';
+
+export { HelperText } from './HelperText';
+export type { HelperTextProps } from './HelperText';
+
+export { VisuallyHidden } from './VisuallyHidden';
+export type { VisuallyHiddenProps } from './VisuallyHidden';
+
+export { Portal } from './Portal';
+export type { PortalProps } from './Portal';
+
+// ---------------------------------------------------------------------------
+// Skyfall X
+// ---------------------------------------------------------------------------
+export { DataGrid } from './DataGrid';
+export type { DataGridProps, DataGridColumn, SortDirection } from './DataGrid';
+
+export { DatePicker } from './DatePicker';
+export type { DatePickerProps } from './DatePicker';
+
+// ---------------------------------------------------------------------------
+// Healthcare (Aegis domain)
+// ---------------------------------------------------------------------------
 export { PatientCard } from './PatientCard';
 export type { PatientCardProps, PatientStatus } from './PatientCard';
 
 export { AppointmentCard } from './AppointmentCard';
 export type { AppointmentCardProps, AppointmentStatus } from './AppointmentCard';
-
-export { Timeline } from './Timeline';
-export type { TimelineProps, TimelineItem, TimelineItemVariant } from './Timeline';
 
 export { ClinicalBanner } from './ClinicalBanner';
 export type { ClinicalBannerProps, ClinicalSeverity } from './ClinicalBanner';
@@ -163,11 +268,30 @@ export type { LabResultRowProps, LabResultStatus } from './LabResultRow';
 export { InsuranceCard } from './InsuranceCard';
 export type { InsuranceCardProps, InsurancePlanType, InsuranceStatus } from './InsuranceCard';
 
-export { Toast } from './Toast';
-export type { ToastProps, ToastStatus } from './Toast';
+// ---------------------------------------------------------------------------
+// Deprecated aliases (backwards compatibility)
+// ---------------------------------------------------------------------------
 
+/** @deprecated Use `TextField` instead */
+export { Input } from './Input';
+/** @deprecated Use `TextFieldProps` instead */
+export type { InputProps } from './Input';
+
+/** @deprecated Use `Progress` instead */
+export { ProgressBar } from './ProgressBar';
+/** @deprecated Use `ProgressProps` instead */
+export type { ProgressBarProps } from './ProgressBar';
+
+/** @deprecated Use `AppBar` instead */
+export { TopNav } from './TopNav';
+/** @deprecated Use `AppBarProps` instead */
+export type { TopNavProps } from './TopNav';
+
+/** @deprecated Use `Dialog` instead */
 export { ConfirmDialog } from './ConfirmDialog';
+/** @deprecated Use `DialogProps` instead */
 export type { ConfirmDialogProps } from './ConfirmDialog';
 
-export { Banner } from './Banner';
-export type { BannerProps, BannerStatus } from './Banner';
+/** @deprecated Use `KpiStatCard` from charts instead */
+export { StatCard } from './StatCard';
+export type { StatCardProps } from './StatCard';

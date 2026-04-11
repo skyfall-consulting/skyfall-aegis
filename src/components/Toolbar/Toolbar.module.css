@@ -1,0 +1,36 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-1);
+  font-family: var(--aegis-font-family-sans);
+  background: var(--aegis-color-surface-default);
+  border-radius: var(--aegis-radius-md);
+  flex-wrap: wrap;
+}
+
+.sm { padding: var(--aegis-space-1); }
+.md { padding: var(--aegis-space-2); }
+
+.outlined {
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+}
+
+/* Button sizing within toolbar */
+.sm :global(button) { min-height: 28px; min-width: 28px; }
+.md :global(button) { min-height: 32px; min-width: 32px; }
+
+/* Group */
+.group {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-1);
+}
+
+/* Vertical divider */
+.divider {
+  width: 1px;
+  align-self: stretch;
+  min-height: 20px;
+  background: var(--aegis-color-border-default);
+  margin: 0 var(--aegis-space-1);
+}

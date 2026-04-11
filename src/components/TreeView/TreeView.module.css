@@ -1,0 +1,101 @@
+.tree {
+  font-family: var(--aegis-font-family-sans);
+}
+
+.tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Node row */
+.node {
+  display: flex;
+  align-items: center;
+  gap: var(--aegis-space-1);
+  cursor: pointer;
+  border-radius: var(--aegis-radius-sm);
+  color: var(--aegis-color-text-primary);
+  transition: background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+  user-select: none;
+}
+
+.sm.node { padding: 2px var(--aegis-space-2); font-size: var(--aegis-font-size-body-sm); min-height: 28px; }
+.md.node { padding: var(--aegis-space-1) var(--aegis-space-2); font-size: var(--aegis-font-size-body-md); min-height: 32px; }
+
+.node:hover {
+  background-color: var(--aegis-color-neutral-50);
+}
+
+.node:focus-visible {
+  outline: var(--aegis-border-width-medium) solid var(--aegis-focus-outline-color);
+  outline-offset: -2px;
+}
+
+.node.selected {
+  background-color: var(--aegis-color-brand-primary-50, rgba(26, 115, 232, 0.08));
+  color: var(--aegis-color-brand-primary-600, #1A73E8);
+}
+
+.node.disabled {
+  opacity: var(--aegis-opacity-disabled);
+  pointer-events: none;
+}
+
+/* Chevron toggle */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.chevron {
+  transition: transform var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
+}
+
+.chevronExpanded {
+  transform: rotate(90deg);
+}
+
+.leaf {
+  display: block;
+  width: 16px;
+}
+
+/* Icon slot */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--aegis-color-text-secondary);
+  flex-shrink: 0;
+}
+
+.selected .icon {
+  color: inherit;
+}
+
+/* Label */
+.label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Guide lines */
+.lined {
+  position: relative;
+}
+
+.lined::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--aegis-color-border-default);
+}

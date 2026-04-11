@@ -1,0 +1,145 @@
+.typography {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Variant scale ---------- */
+
+.variant-display-lg {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-display-lg);
+  line-height: var(--aegis-line-height-display-lg);
+  font-weight: var(--aegis-font-weight-bold);
+  letter-spacing: var(--aegis-tracking-tight);
+}
+
+.variant-display-md {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-display-md);
+  line-height: var(--aegis-line-height-display-md);
+  font-weight: var(--aegis-font-weight-bold);
+  letter-spacing: var(--aegis-tracking-tight);
+}
+
+.variant-heading-xl {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-heading-xl);
+  line-height: var(--aegis-line-height-heading-xl);
+  font-weight: var(--aegis-font-weight-semibold);
+}
+
+.variant-heading-lg {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-heading-lg);
+  line-height: var(--aegis-line-height-heading-lg);
+  font-weight: var(--aegis-font-weight-semibold);
+}
+
+.variant-heading-md {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-heading-md);
+  line-height: var(--aegis-line-height-heading-md);
+  font-weight: var(--aegis-font-weight-semibold);
+}
+
+.variant-heading-sm {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-heading-sm);
+  line-height: var(--aegis-line-height-heading-sm);
+  font-weight: var(--aegis-font-weight-semibold);
+}
+
+.variant-body-lg {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-lg);
+  line-height: var(--aegis-line-height-body-lg);
+  font-weight: var(--aegis-font-weight-regular);
+}
+
+.variant-body-md {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-md);
+  line-height: var(--aegis-line-height-body-md);
+  font-weight: var(--aegis-font-weight-regular);
+}
+
+.variant-body-sm {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-body-sm);
+  line-height: var(--aegis-line-height-body-sm);
+  font-weight: var(--aegis-font-weight-regular);
+}
+
+.variant-label-lg {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-label-lg);
+  line-height: var(--aegis-line-height-label-lg);
+  font-weight: var(--aegis-font-weight-medium);
+}
+
+.variant-label-md {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-label-md);
+  line-height: var(--aegis-line-height-label-md);
+  font-weight: var(--aegis-font-weight-medium);
+}
+
+.variant-caption {
+  font-family: var(--aegis-font-family-sans);
+  font-size: var(--aegis-font-size-caption);
+  line-height: var(--aegis-line-height-caption);
+  font-weight: var(--aegis-font-weight-regular);
+}
+
+.variant-data {
+  font-family: var(--aegis-font-family-mono);
+  font-size: var(--aegis-font-size-data);
+  line-height: var(--aegis-line-height-data);
+  font-weight: var(--aegis-font-weight-medium);
+}
+
+.variant-code {
+  font-family: var(--aegis-font-family-mono);
+  font-size: var(--aegis-font-size-code);
+  line-height: var(--aegis-line-height-code);
+  font-weight: var(--aegis-font-weight-regular);
+}
+
+/* ---------- Colors ---------- */
+
+.color-primary { color: var(--aegis-color-text-primary); }
+.color-secondary { color: var(--aegis-color-text-secondary); }
+.color-muted { color: var(--aegis-color-text-muted); }
+.color-inverse { color: var(--aegis-color-text-inverse); }
+.color-success { color: var(--aegis-color-success-700); }
+.color-warning { color: var(--aegis-color-warning-700); }
+.color-error { color: var(--aegis-color-error-700); }
+.color-info { color: var(--aegis-color-info-700); }
+.color-inherit { color: inherit; }
+
+/* ---------- Weights ---------- */
+
+.weight-regular { font-weight: var(--aegis-font-weight-regular); }
+.weight-medium { font-weight: var(--aegis-font-weight-medium); }
+.weight-semibold { font-weight: var(--aegis-font-weight-semibold); }
+.weight-bold { font-weight: var(--aegis-font-weight-bold); }
+
+/* ---------- Alignment ---------- */
+
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+/* ---------- Truncation ---------- */
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lineClamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

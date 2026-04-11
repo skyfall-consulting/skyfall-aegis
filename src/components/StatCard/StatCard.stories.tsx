@@ -14,8 +14,11 @@ const BedIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V6H1v15h2v-3h18v3h2V11a4 4 0 00-4-4z" /></svg>
 );
 
+/**
+ * @deprecated Use `KpiStatCard` from the Charts category instead.
+ */
 const meta: Meta<typeof StatCard> = {
-  title: 'Components/StatCard',
+  title: 'Data Display/StatCard (Deprecated)',
   component: StatCard,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 280 }}><Story /></div>],

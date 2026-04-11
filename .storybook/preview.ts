@@ -25,6 +25,24 @@ const preview: Preview = {
       ],
     },
     layout: 'centered',
+    options: {
+      storySort: {
+        order: [
+          'Foundations',
+          ['Tokens', 'Themes', 'Icons'],
+          'Inputs',
+          'Data Display',
+          'Feedback',
+          'Surfaces',
+          'Navigation',
+          'Layout',
+          'Utils',
+          'Skyfall X',
+          'Charts',
+          'Healthcare',
+        ],
+      },
+    },
   },
 };
 

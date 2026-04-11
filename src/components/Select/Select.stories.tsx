@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Select } from './Select';
 
 const meta: Meta<typeof Select> = {
-  title: 'Components/Select',
+  title: 'Inputs/Select',
   component: Select,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 280 }}><Story /></div>],

@@ -68,3 +68,29 @@ export const Medicaid: Story = {
     effectiveDate: '01/01/2026',
   },
 };
+
+export const InsuranceList: Story = {
+  name: 'Coverage Summary',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <InsuranceCard
+        planName="Blue Cross Blue Shield"
+        memberId="XYZ123456789"
+        groupNumber="GRP-98765"
+        planType="PPO"
+        status="active"
+        effectiveDate="01/01/2026"
+        expirationDate="12/31/2026"
+      />
+      <InsuranceCard
+        planName="Delta Dental"
+        memberId="DD-5551234"
+        groupNumber="GRP-98765"
+        planType="PPO"
+        status="active"
+        effectiveDate="01/01/2026"
+        expirationDate="12/31/2026"
+      />
+    </div>
+  ),
+};

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { HelperText } from './HelperText';
 
 const meta: Meta<typeof HelperText> = {
-  title: 'Components/HelperText',
+  title: 'Utils/HelperText',
   component: HelperText,
   tags: ['autodocs'],
 };

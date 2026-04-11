@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { ConfirmDialog } from './ConfirmDialog';
+import { Dialog } from './Dialog';
 
-const meta: Meta<typeof ConfirmDialog> = {
-  title: 'Feedback/ConfirmDialog',
-  component: ConfirmDialog,
+const meta: Meta<typeof Dialog> = {
+  title: 'Feedback/Dialog',
+  component: Dialog,
   tags: ['autodocs'],
 };
 
 export default meta;
-type Story = StoryObj<typeof ConfirmDialog>;
+type Story = StoryObj<typeof Dialog>;
 
 export const Default: Story = {
   args: {
@@ -51,7 +51,7 @@ export const Interactive: Story = {
     return (
       <>
         <button onClick={() => setOpen(true)}>Open Dialog</button>
-        <ConfirmDialog
+        <Dialog
           open={open}
           onConfirm={() => {
             alert('Confirmed!');

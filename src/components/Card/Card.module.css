@@ -1,28 +1,7 @@
-.card {
-  border-radius: var(--aegis-radius-lg);
-  background-color: var(--aegis-color-surface-default);
-  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
-  transition: box-shadow var(--aegis-motion-duration-base) var(--aegis-motion-easing-standard);
-}
-
-/* Elevation */
-.flat {
-  box-shadow: var(--aegis-shadow-none);
-}
+/* Card — thin layer over Paper.
+   Surface, border, radius, elevation, and padding delegated to Paper.
+   Only Card-specific enhancements here. */
 
 .raised {
-  box-shadow: var(--aegis-shadow-sm);
   border-bottom: var(--aegis-border-width-medium) var(--aegis-border-style-default) var(--aegis-color-border-subtle);
 }
-
-.elevated {
-  box-shadow: var(--aegis-shadow-md);
-  border-color: var(--aegis-color-border-subtle);
-  border-bottom: var(--aegis-border-width-medium) var(--aegis-border-style-default) var(--aegis-color-border-default);
-}
-
-/* Padding */
-.pad-none { padding: 0; }
-.pad-sm { padding: var(--aegis-space-4); }
-.pad-md { padding: var(--aegis-space-6); }
-.pad-lg { padding: var(--aegis-space-8); }

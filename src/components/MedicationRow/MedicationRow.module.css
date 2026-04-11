@@ -1,7 +1,9 @@
+/* MedicationRow — healthcare-specific row layout only.
+   Status badge and text styling delegated to StatusBadge, Typography. */
+
 .row {
   padding: var(--aegis-space-3) var(--aegis-space-4);
   border-bottom: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-subtle);
-  font-family: var(--aegis-font-family-sans);
   transition: background-color var(--aegis-motion-duration-fast) var(--aegis-motion-easing-standard);
 }
 
@@ -20,82 +22,22 @@
   margin-bottom: var(--aegis-space-2);
 }
 
-.statusIndicator {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--aegis-radius-full);
-  flex-shrink: 0;
-}
-
-.indicator-active { background-color: var(--aegis-color-success-500); }
-.indicator-discontinued { background-color: var(--aegis-color-text-muted); }
-.indicator-hold { background-color: var(--aegis-color-warning-500); }
-.indicator-prn { background-color: var(--aegis-color-info-500); }
-
-.name {
-  font-size: var(--aegis-font-size-body-md);
-  font-weight: var(--aegis-font-weight-semibold);
-  color: var(--aegis-color-text-primary);
-  line-height: var(--aegis-line-height-body-md);
-}
-
-.dosage {
-  font-size: var(--aegis-font-size-body-sm);
-  color: var(--aegis-color-text-secondary);
-  line-height: var(--aegis-line-height-body-sm);
-}
-
-.statusBadge {
-  margin-left: auto;
-  display: inline-flex;
-  align-items: center;
-  padding: var(--aegis-space-1) var(--aegis-space-2);
-  border-radius: var(--aegis-radius-sm);
-  font-size: var(--aegis-font-size-body-xs);
-  font-weight: var(--aegis-font-weight-medium);
-  line-height: var(--aegis-line-height-body-sm);
-}
-
-.badge-active {
-  background-color: var(--aegis-color-success-50);
-  color: var(--aegis-color-success-700);
-}
-
-.badge-discontinued {
-  background-color: var(--aegis-color-surface-sunken);
-  color: var(--aegis-color-text-muted);
-  text-decoration: line-through;
-}
-
-.badge-hold {
-  background-color: var(--aegis-color-warning-50);
-  color: var(--aegis-color-warning-700);
-}
-
-.badge-prn {
-  background-color: var(--aegis-color-info-50);
-  color: var(--aegis-color-info-700);
-}
-
 .secondary {
   display: flex;
   flex-wrap: wrap;
   gap: var(--aegis-space-4);
-  padding-left: calc(8px + var(--aegis-space-3));
+  padding-left: var(--aegis-space-3);
 }
 
 .detail {
-  font-size: var(--aegis-font-size-body-xs);
-  color: var(--aegis-color-text-secondary);
-  line-height: var(--aegis-line-height-body-sm);
+  display: inline-flex;
+  gap: var(--aegis-space-1);
 }
 
-.detailLabel {
-  color: var(--aegis-color-text-muted);
-  font-weight: var(--aegis-font-weight-medium);
-}
-
-.discontinued .name {
+.strikethrough {
   text-decoration: line-through;
-  color: var(--aegis-color-text-muted);
+}
+
+.discontinued {
+  opacity: var(--aegis-opacity-disabled, 0.6);
 }

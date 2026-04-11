@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Autocomplete } from './Autocomplete';
 
 const meta: Meta<typeof Autocomplete> = {
-  title: 'Forms/Autocomplete',
+  title: 'Inputs/Autocomplete',
   component: Autocomplete,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ width: 360 }}><Story /></div>],

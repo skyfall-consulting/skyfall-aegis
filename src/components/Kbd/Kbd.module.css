@@ -1,0 +1,28 @@
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--aegis-font-family-sans);
+  font-weight: var(--aegis-font-weight-medium);
+  color: var(--aegis-color-text-secondary);
+  background-color: var(--aegis-color-surface-sunken);
+  border: var(--aegis-border-width-hairline) var(--aegis-border-style-default) var(--aegis-color-border-default);
+  border-bottom-width: 2px;
+  border-radius: var(--aegis-radius-sm);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.sm {
+  min-width: 18px;
+  height: 18px;
+  padding: 0 var(--aegis-space-1);
+  font-size: 11px;
+}
+
+.md {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 var(--aegis-space-2);
+  font-size: var(--aegis-font-size-body-xs);
+}
