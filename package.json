@@ -1,6 +1,6 @@
 {
   "name": "@skyfall_ai/aegis",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "Skyfall Aegis — Accessibility-forward, compliance-aware healthcare design system",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
